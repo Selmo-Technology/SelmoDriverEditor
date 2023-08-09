@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2023-08-09T15:04:34.857+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>INPUTMODE</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">INPUTMODE</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich<text styleclass="Normal">&#32;</text></para>
+    <para styleclass="Normal">Zone In, Zone InOut</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[INPUTMODE(digital)],</para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Die Art des Signals wird durch den Modus des Eingangs bestimmt. Dabei kann es sich entweder um ein digitales oder analoges Signal oder um einen Parameter handeln. Der Modus des Eingangs gibt somit an, welche Art von Signal erwartet wird und wie dieses Signal interpretiert werden soll. Wenn der Eingangsmodus beispielsweise auf &quot;digital&quot; eingestellt ist, erwartet das System ein Signal, das aus diskreten Werten besteht, während bei einem analogen Eingangsmodus ein kontinuierliches Signal erwartet wird. Bei einem Parametermodus hingegen wird ein Wert erwartet, der einen bestimmten Parameter repräsentiert. Insgesamt hängt die Art des Signals, das ein System empfängt und verarbeitet, somit maßgeblich vom eingestellten Eingangsmodus ab.</para>
+  </body>
+</topic>

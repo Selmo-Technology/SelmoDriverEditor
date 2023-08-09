@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="Needs Review" modified="2023-08-09T15:05:24.205+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>INPUTDELAY</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">INPUTDELAY</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich<text styleclass="Normal">&#32;</text></para>
+    <para styleclass="Normal">Zone In, Zone InOut</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[INPUTDELAY(1000)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Bitte geben Sie an, um wie viele Millisekunden das Eingangssignal verzögert werden soll. Die Verzögerung bezieht sich auf den Zeitunterschied zwischen dem Zeitpunkt, zu dem das Signal empfangen wird, und dem Zeitpunkt, zu dem es im System verarbeitet wird. Eine Verzögerung kann beabsichtigt sein, um das Signal auf eine bestimmte Weise zu modifizieren oder um sicherzustellen, dass es synchron mit anderen Signalen verarbeitet wird. Die genaue Zeitdauer, um die das Signal verzögert werden soll, hängt von den Anforderungen des Systems und der Art des Signals ab, das verarbeitet wird.</para>
+  </body>
+</topic>

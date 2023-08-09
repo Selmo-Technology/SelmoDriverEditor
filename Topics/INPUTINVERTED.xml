@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="Needs Review" modified="2023-08-09T15:05:05.451+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>INPUTINVERTED</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">INPUTINVERTED</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich<text styleclass="Normal">&#32;</text></para>
+    <para styleclass="Normal">Zone In, Zone InOut</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[INPUTINVERTED(false)], [INPUTINVERTED(true)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Bitte legen Sie fest, ob das Eingangssignal invertiert ist oder nicht. Das bedeutet, dass Sie entscheiden müssen, ob das Signal, das in ein bestimmtes System eingeht, in seiner Polarität umgekehrt ist oder nicht. Eine invertierte Signalpolarität bedeutet, dass das Signal in Bezug auf seine positive und negative Polarität umgekehrt ist. Es ist wichtig, diese Entscheidung zu treffen, da sie Auswirkungen auf die Art und Weise hat, wie das Signal im System verarbeitet wird.</para>
+  </body>
+</topic>
