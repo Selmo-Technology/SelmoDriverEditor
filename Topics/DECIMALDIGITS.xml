@@ -1,9 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:29:23.090+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2023-08-21T15:12:11.147+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
   <title>DECIMALDIGITS</title>
   <body>
-    <header><para styleclass="Heading1">DECIMALDIGITS</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">DECIMALDIGITS</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich</para>
+    <para styleclass="Normal">Parameter</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[DECIMALDIGITS(-1)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">DD (Decimal Digits) steht für die Anzahl der Dezimalstellen, die bei der Anzeige des Parameterwerts berücksichtigt werden sollen. Diese Anzahl wird üblicherweise im Parameter-Setup definiert und kann je nach Anwendung variieren. Wenn der Wert von DD auf 0 gesetzt wird, bedeutet dies, dass keine Nachkommastellen angezeigt werden sollen und der Wert als Ganzzahl dargestellt wird. Wenn DD auf -1 gesetzt wird, werden keine Nachkommastellen berücksichtigt, wenn DD auf 1 gesetzt wird, wird eine Dezimalstelle berücksichtigt und so weiter. Die Anzahl der Dezimalstellen ist wichtig, um eine korrekte und genaue Anzeige des Parameterwerts sicherzustellen. Wenn die Anzahl der Dezimalstellen nicht ausreichend ist, können wichtige Informationen verloren gehen oder ungenau dargestellt werden. Wenn die Anzahl der Dezimalstellen zu hoch ist, kann dies die Lesbarkeit des Wertes beeinträchtigen. Daher ist es wichtig, die Anzahl der Dezimalstellen sorgfältig zu definieren und zu überwachen, um eine genaue und lesbare Darstellung des Parameterwerts zu gewährleisten.</para>
+    <para styleclass="Normal"><text style="font-weight:bold;">DD -1 </text>(Input/Output)</para>
+    <para styleclass="Normal"><image src="HMIParameterDD_Default.png" scale="70.00%" width="223" height="101" figurelistinclude="0"><caption><![CDATA[HMI]]></caption></image> <image src="HMIParameterDD_Default_Out.png" scale="70.00%" width="223" height="101" figurelistinclude="0"><caption><![CDATA[HMI]]></caption></image></para>
+    <para styleclass="Normal">DD 0 (Input/Output)</para>
+    <para styleclass="Normal"><image src="HMIParameterDD_Zero.png" scale="70.00%" width="223" height="101" figurelistinclude="0"><caption><![CDATA[HMI]]></caption></image> <image src="HMIParameterDD_Zero_Out.png" scale="70.00%" width="223" height="101" figurelistinclude="0"><caption><![CDATA[HMI]]></caption></image></para>
+    <para styleclass="Normal">DD 1 (Input/Output)</para>
+    <para styleclass="Normal"><image src="HMIParameterDD_One.png" scale="70.00%" width="223" height="101" figurelistinclude="0"><caption><![CDATA[HMI]]></caption></image> <image src="HMIParameterDD_One_Out.png" scale="70.00%" width="223" height="101" figurelistinclude="0"><caption><![CDATA[HMI]]></caption></image></para>
   </body>
 </topic>

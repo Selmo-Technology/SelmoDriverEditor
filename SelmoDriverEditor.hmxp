@@ -121,6 +121,7 @@
       <config-value name="historykeepdeletedfiles">0</config-value>
       <config-value name="vcsmanuallycheckout">0</config-value>
       <config-value name="repositorystyleusage">0</config-value>
+      <config-group name="bookmarks"/>
     </config-group>
     <config-group name="pdf">
       <config-value name="style">0</config-value>
@@ -494,6 +495,9 @@
       <config-value name="jpgquality">90</config-value>
       <config-value name="htmlpopup">3</config-value>
       <config-value name="skin">$(HMSYS)Templates\HTML Skins\CHM Skin, Dark Blue Header, Feature Images.hmskin</config-value>
+    </config-group>
+    <config-group name="plugins">
+      <config-value name="deepl">{&quot;destlang&quot;:&quot;ZH&quot;,&quot;defapiglossary&quot;:&quot;&quot;,&quot;glossarycount&quot;:&quot;0&quot;}</config-value>
     </config-group>
     <variables>
       <variable id="PSS" type="text" translate="true">PSS '21</variable>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="Needs Review" modified="2023-08-10T15:50:43.289+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>KEEPALIVE</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">KEEPALIVE</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich</para>
+    <para styleclass="Normal">Zone InOut</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[KEEPALIVE(false)], [KEEPALIVE(true)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal"><image src="StudioOutputKeepAlive.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[Studio]]></caption></image></para>
+    <para styleclass="Normal"><text styleclass="Image Caption">Die Ansteuerung des Ausgangs bietet zwei unterschiedliche Herangehensweisen, die durch die Eigenschaft &quot;Keep Alive&quot; bestimmt werden:</text></para>
+    <list id="0" type="ul" listtype="bullet" formatstring="&#183;" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:12pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Image Caption">Wenn die Eigenschaft &quot;Keep Alive&quot; auf den Wert &quot;False&quot; gesetzt ist, erfolgt die Standardansteuerung. In diesem Fall wird der Ausgang automatisch deaktiviert, sobald das Feedback(Input) erreicht wurde.</text></li>
+    </list>
+    <list id="1" type="ul" listtype="bullet" formatstring="&#183;" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:12pt; color:#000000;">
+      <li styleclass="Normal"><text styleclass="Image Caption">Wenn hingegen die Eigenschaft &quot;Keep Alive&quot; auf den Wert &quot;True&quot; gesetzt wird, wird der Ausgang unabhängig vom Feedback gesteuert. Das bedeutet, dass die Ansteuerung des Ausgangs nicht von der Rückmeldung abhängt und dieser aktiv bleibt, ungeachtet des Feedbacks.</text></li>
+    </list>
+  </body>
+</topic>

@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:37:29.474+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2023-08-21T15:24:42.026+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
   <title>ERRORDELAY</title>
   <body>
-    <header><para styleclass="Heading1">ERRORDELAY</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">ERRORDELAY</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich<text styleclass="Normal"> </text></para>
+    <para styleclass="Normal">CMZ</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[ERRORDELAY(0)] </para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Wird eingesetzt, wenn der Fehler zeitverzögert ausgelöst werden soll. Zusammenfassend lässt sich sagen, dass &quot;Error Delay&quot; als Begriff eingesetzt wird, wenn ein Fehler in der Signalverarbeitung auftritt und eine zeitverzögerte Auslösung gewünscht ist. Das Phänomen, bei dem ein Signal kurzzeitig mehrere schnelle Impulse erzeugt, anstatt eines einzigen Impulses, wird als &quot;Signalprellen&quot; oder auch als &quot;Kontaktprellen&quot; bezeichnet.</para>
   </body>
 </topic>

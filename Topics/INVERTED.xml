@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2023-08-21T15:20:48.401+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
+  <title>INVERTED</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">INVERTED</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich</para>
+    <para styleclass="Normal">CMZ</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[INVERTED(false)], [INVERTED(true)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Wenn das Feld &quot;Inverted&quot; aktiviert wird, wird der Wert der verknüpften Variable im PLC-Code der entsprechenden Ebene invertiert.</para>
+    <para styleclass="Normal">Dies ist nur mit booleschen Variablen Typen möglich</para>
+    <para styleclass="Normal"><image src="PLCCMZDeclerationAsHardPrg.png" scale="70.00%" width="774" height="678" figurelistinclude="0"><caption><![CDATA[PLC]]></caption></image></para>
+  </body>
+</topic>

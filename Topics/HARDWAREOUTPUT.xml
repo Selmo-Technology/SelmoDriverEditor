@@ -1,9 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:38:23.134+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2023-08-10T10:36:24.400+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
   <title>HARDWAREOUTPUT</title>
   <body>
-    <header><para styleclass="Heading1">HARDWAREOUTPUT</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">HARDWAREOUTPUT</para>
+    </header>
+    <para styleclass="Heading3">Wirkbereich </para>
+    <para styleclass="Normal">Zone InOut, Zone Out</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[HARDWAREOUTPUT(false)], [HARDWAREOUTPUT(true)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Wenn Sie den Output als &quot;true&quot; deklarieren, wird er als Hardware-Ausgang deklariert und mit dem &quot;AT %Q*&quot; Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert auf einem physikalischen Ausgang des Systems sendet, wie beispielsweise von einem Ventil oder einem Umrichter.</para>
+    <para styleclass="Normal"><image src="StudioOutputDeclerationAsHardProperty.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[Studio]]></caption></image></para>
+    <para styleclass="Normal"><image src="PLCOutputDeclerationAsHOutput.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[PLC]]></caption></image></para>
   </body>
 </topic>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-10T08:48:51.632+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>VAR_INPUT</title>
+  <body>
+    <header><para styleclass="Heading1">VAR_INPUT</para></header>
+    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+  </body>
+</topic>
