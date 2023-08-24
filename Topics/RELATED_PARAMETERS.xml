@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:32:56.767+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-08-23T12:55:32.653+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>RELATED_PARAMETERS</title>
   <body>
-    <header><para styleclass="Heading1">RELATED_PARAMETERS</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">RELATED_PARAMETERS</para>
+    </header>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_INPUT">VAR_INPUT</link> , <link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link>, <link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_INPUT-CONSTANT">VAR_INPUT CONSTANT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich</para>
+    <para styleclass="Normal">Zone In, Zone InOut, Zone Out, Parameter</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[RELATED_PARAMETERS(ValueY1)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Wenn es erforderlich ist, mehrere Parameter gleichzeitig einzufügen, können Sie mithilfe dieses Attributs auswählen, welche Parameter in die Einfügung einbezogen werden sollen. Dies setzt voraus, dass der jeweilige Parameter in der Deklaration vorhanden ist.</para>
   </body>
 </topic>

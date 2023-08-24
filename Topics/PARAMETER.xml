@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="Needs Review" modified="2023-08-23T12:25:15.849+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>PARAMETER</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">PARAMETER</para>
+    </header>
+    <para styleclass="Heading3">Objektbereich</para>
+    <para styleclass="Normal">Parameter</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[PARAMETER(false)], [PARAMETER(true)], </para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Wird verwendet, um einen Parameter im Parameter Layer der Sequence anzulegen.</para>
+  </body>
+</topic>

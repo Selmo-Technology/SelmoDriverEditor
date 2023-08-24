@@ -1,18 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" modified="2023-08-21T15:34:19.566+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-08-23T12:56:36.271+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>CMZ</title>
   <body>
     <header>
       <para styleclass="Heading1">CMZ</para>
     </header>
-    <para styleclass="Heading3">Wirkbereich</para>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich</para>
     <para styleclass="Normal">CMZ</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
     <para styleclass="Normal">[CMZ(false)], [CMZ(true)]</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Beschreibung</para>
-    <para styleclass="Normal">Wird verwendet um einen Eintrag im CMZ der Sequence durchzuführen</para>
+    <para styleclass="Normal">Wird verwendet, um ein CMZ im CMZ-Bereich der Sequence anzulegen</para>
   </body>
 </topic>

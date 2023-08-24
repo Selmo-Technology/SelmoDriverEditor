@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="Needs Review" modified="2023-08-23T12:48:43.222+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>HARDWARE</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">HARDWARE</para>
+    </header>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_IN_OUT">VAR_IN_OUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Normal"><text styleclass="Heading3">Objektbereich</text></para>
+    <para styleclass="Normal">GVL_&lt;Sequence1&gt;_Driver</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[HARDWARE(false)], [HARDWARE(true)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Wird verwendet, um eine Variable in der GVL_&lt;Sequence1&gt;_Driver mit einem Adressbereich zuzuweisen.</para>
+  </body>
+</topic>

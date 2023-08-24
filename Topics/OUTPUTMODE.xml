@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-08-10T09:04:40.142+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-08-23T13:34:22.777+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>OUTPUTMODE</title>
   <body>
     <header>
       <para styleclass="Heading1">OUTPUTMODE</para>
     </header>
-    <para styleclass="Heading3">Wirkbereich<text styleclass="Normal">&#32;</text></para>
-    <para styleclass="Normal">Zone In, Zone InOut</para>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_INPUT">VAR_INPUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich<text styleclass="Normal">&#32;</text></para>
+    <para styleclass="Normal">Zone InOut, Zone Out</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
     <para styleclass="Normal">[OUTPUTMODE(digital)], [OUTPUTMODE(analogvalue)], [OUTPUTMODE(analogparameter)], [OUTPUTMODE(parameterlist)]</para>

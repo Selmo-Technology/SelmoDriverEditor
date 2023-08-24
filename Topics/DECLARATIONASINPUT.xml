@@ -1,19 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-08-21T15:27:14.156+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-08-23T12:56:45.973+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>DECLARATIONASINPUT</title>
   <body>
     <header>
       <para styleclass="Heading1">DECLARATIONASINPUT</para>
     </header>
-    <para styleclass="Heading3">Wirkbereich </para>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich </para>
     <para styleclass="Normal">CMZ</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
     <para styleclass="Normal">[DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Declaration as Input</para>
-    <para styleclass="Normal">Wenn Sie die CMZ als &quot;True&quot; deklarieren, wird sie als Hardware-Eingang deklariert und mit dem &quot;AT %I*&quot; Attribut  in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.</para>
+    <para styleclass="Normal">Wenn Sie die CMZ als &quot;True&quot; deklarieren, wird sie als Hardware-Eingang deklariert und mit dem &quot;AT %I*&quot; Attribut &#160;in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.</para>
     <para styleclass="Normal"><image src="PLCCMZDeclerationAsHard.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[PLC]]></caption></image></para>
   </body>
 </topic>

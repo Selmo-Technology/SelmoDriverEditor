@@ -1,9 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:26:09.663+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2023-08-24T08:26:03.510+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
   <title>ANALOGFUNCTION</title>
   <body>
-    <header><para styleclass="Heading1">ANALOGFUNCTION</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">ANALOGFUNCTION</para>
+    </header>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich </para>
+    <para styleclass="Normal">Zone In, Zone InOut  </para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[ANALOGFUNCTION(Equals)], [ANALOGFUNCTION(GreaterThan)], [ANALOGFUNCTION(LessThan)], [ANALOGFUNCTION(GreaterEquals)], [ANALOGFUNCTION(LessEquals)],</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Die in eckigen Klammern angegebenen Ausdrücke, wie &quot;Equals&quot; (Gleich), &quot;GreaterThan&quot; (Größer als), &quot;LessThan&quot; (Kleiner als), &quot;GreaterEquals&quot; (Größer oder gleich) und &quot;LessEquals&quot; (Kleiner oder gleich), repräsentieren verschiedene Vergleichsoperationen oder Bedingungen, die in der &quot;ANALOGFUNCTION&quot; verwendet werden können.</para>
+    <list id="0" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:12pt; color:#000000;">
+      <li styleclass="Normal">Equals: Diese Funktion dient dazu, zu überprüfen, ob zwei analoge Werte gleich sind. Sie könnte beispielsweise verwendet werden, um festzustellen, ob ein bestimmtes analoges Signal einem anderen entspricht.</li>
+    </list>
+    <list id="1" type="ul" listtype="bullet" formatstring="·" format-charset="SYMBOL_CHARSET" levelreset="true" legalstyle="false" startfrom="1" styleclass="Normal" style="font-family:Symbol; font-size:12pt; color:#000000;">
+      <li styleclass="Normal">GreaterThan: Diese Funktion wird verwendet, um zu überprüfen, ob ein analoger Wert größer ist als ein anderer. Dies kann nützlich sein, um Bedingungen zu definieren, die erfüllt werden müssen, wenn ein Wert eine bestimmte Schwelle überschreitet.</li>
+      <li styleclass="Normal">LessThan: Im Gegensatz zur vorherigen Funktion überprüft diese, ob ein analoger Wert kleiner ist als ein anderer. Das kann in Situationen hilfreich sein, in denen die Größe eines Wertes von Bedeutung ist.</li>
+      <li styleclass="Normal">GreaterEquals: Diese Funktion dient dazu, festzustellen, ob ein Wert gleich oder größer als ein anderer ist. Das ist nützlich, wenn Sie eine Aktion auslösen möchten, wenn ein Wert einen bestimmten Schwellenwert erreicht oder überschreitet.</li>
+      <li styleclass="Normal">LessEquals: Hierbei wird überprüft, ob ein Wert kleiner oder gleich einem anderen ist. Dies kann in Szenarien verwendet werden, in denen Sie Aktionen basierend auf einer bestimmten Grenze auslösen möchten.</li>
+    </list>
   </body>
 </topic>

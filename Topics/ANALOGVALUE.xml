@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:26:44.500+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2023-08-24T08:29:06.978+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
   <title>ANALOGVALUE</title>
   <body>
-    <header><para styleclass="Heading1">ANALOGVALUE</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">ANALOGVALUE</para>
+    </header>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_INPUT">VAR_INPUT</link>, <link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich</para>
+    <para styleclass="Normal">Zone In, Zone InOut  , Zone Out</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[ANALOGVALUE(100)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Dies dient zur Festlegung eines konkreten analogen Werts in einem programmatischen Kontext.</para>
   </body>
 </topic>

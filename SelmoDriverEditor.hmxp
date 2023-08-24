@@ -3,7 +3,29 @@
   <config>
     <repository name="StyleRepoSelmo" href="..\StyleRepo\StyleRepoSelmo.hmxr"/>
     <namespaces/>
-    <export-task-groups/>
+    <export-task-groups>
+      <export-task-group name="Recent Publishes">
+        <export-tasks>
+          <export-task name="Publish as CHM" format="CHM">
+            <task-config-group name="settings">
+              <task-config-value name="outputfile">..\..\Export\HTML\SelmoDriverEditor.chm</task-config-value>
+              <task-config-value name="skin">$(HMSYS)Templates\HTML Skins\CHM Skin, Dark Blue Header, Feature Images.hmskin</task-config-value>
+              <task-config-value name="deletetemp">1</task-config-value>
+              <task-config-value name="make0include">CHM</task-config-value>
+              <task-config-value name="make0status">*</task-config-value>
+            </task-config-group>
+          </export-task>
+          <export-task name="Publish as HTM" format="HTM">
+            <task-config-group name="settings">
+              <task-config-value name="outputfile">..\..\Export\HTML\index.html</task-config-value>
+              <task-config-value name="skin">$(HMSYS)Templates\HTML Skins\Webhelp, iFrames Responsive, Blue.hmskin</task-config-value>
+              <task-config-value name="make3include">HTML</task-config-value>
+              <task-config-value name="make3status">*</task-config-value>
+            </task-config-group>
+          </export-task>
+        </export-tasks>
+      </export-task-group>
+    </export-task-groups>
     <helpwindows>
       <helpwindow name="Main" left="-1" top="-1" width="-1" height="-1">
         <caption translate="true">&lt;%TITLE%&gt;</caption>
@@ -121,6 +143,10 @@
       <config-value name="historykeepdeletedfiles">0</config-value>
       <config-value name="vcsmanuallycheckout">0</config-value>
       <config-value name="repositorystyleusage">0</config-value>
+      <config-value name="make0include">CHM</config-value>
+      <config-value name="make0status">*</config-value>
+      <config-value name="make3include">HTML</config-value>
+      <config-value name="make3status">*</config-value>
       <config-group name="bookmarks"/>
     </config-group>
     <config-group name="pdf">
@@ -477,6 +503,8 @@
 </body>
 </html>]]></config-value>
       </config-group>
+      <config-value name="fontalternatives">Maison Neue Extended Book='Maison Neue Extended Book', sans-serif</config-value>
+      <config-value name="outputfile">..\..\Export\HTML\index.html</config-value>
     </config-group>
     <config-group name="chm">
       <config-value name="defaultext">.html</config-value>
@@ -495,9 +523,18 @@
       <config-value name="jpgquality">90</config-value>
       <config-value name="htmlpopup">3</config-value>
       <config-value name="skin">$(HMSYS)Templates\HTML Skins\CHM Skin, Dark Blue Header, Feature Images.hmskin</config-value>
+      <config-value name="outputfile">..\..\Export\HTML\SelmoDriverEditor.chm</config-value>
+      <config-value name="deletetemp">1</config-value>
     </config-group>
     <config-group name="plugins">
       <config-value name="deepl">{&quot;destlang&quot;:&quot;ZH&quot;,&quot;defapiglossary&quot;:&quot;&quot;,&quot;glossarycount&quot;:&quot;0&quot;}</config-value>
+    </config-group>
+    <config-group name="user">
+      <config-group name="geraldokorn">
+        <config-group name="project">
+          <config-value name="lastexport">3</config-value>
+        </config-group>
+      </config-group>
     </config-group>
     <variables>
       <variable id="PSS" type="text" translate="true">PSS '21</variable>

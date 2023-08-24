@@ -1,9 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="" lasteditedby="GeraldOkorn" modified="2023-08-09T13:24:26.362+02:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" modified="2023-08-23T14:13:04.584+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
   <title>CLONE2INVERTED</title>
   <body>
-    <header><para styleclass="Heading1">CLONE2INVERTED</para></header>
-    <para styleclass="Normal">Geben Sie hier den Text ein.</para>
+    <header>
+      <para styleclass="Heading1">CLONE2INVERTED</para>
+    </header>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich </para>
+    <para styleclass="Normal">Zone In, Zone InOut</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[CLONE2INVERTED(false)], [CLONE2INVERTED(true)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Um ein Signal vollständig abzusichern kann eine invertierte Zone-In eingefügt werden. Die invertierte Zone überwacht den sicheren Übergang des mit der Zone verknüpften Signals von true auf false. Beispielsweise werden Taster, Sensoren etc. damit überwacht. Dadurch kann eine Fehlbedienung verhindert werden.  Mithilfe des Buttons Clone to inverted wird eine invertierte Zone der ausgewählten Zone-In eingefügt.</para>
+    <para styleclass="Normal"> <image src="Invertierte Zone In.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[Studio]]></caption></image></para>
   </body>
 </topic>

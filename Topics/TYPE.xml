@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" modified="2023-08-23T12:47:30.173+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
+  <title>TYPE</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">TYPE</para>
+    </header>
+    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_INPUT-CONSTANT">VAR_INPUT CONSTANT</link></para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Objektbereich</para>
+    <para styleclass="Normal">Parameter</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Syntax</para>
+    <para styleclass="Normal">[TYPE(output)], [TYPE(input)]</para>
+    <para styleclass="Normal"></para>
+    <para styleclass="Heading3">Beschreibung</para>
+    <para styleclass="Normal">Legt fest, um welche Art von Parameter es sich handelt.</para>
+  </body>
+</topic>
