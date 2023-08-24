@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" modified="2023-08-24T08:35:13.041+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Under Construction">
+<topic template="Default" status="Under Construction" modified="2023-08-24T09:27:25.673+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>Driver Editor</title>
   <body>
     <header>
       <para styleclass="Heading1">Driver Editor</para>
     </header>
-    <para styleclass="Normal"><text style="background-color:#ffff00;">Hier soll der Editor im Studio beschrieben werden.</text></para>
+    <para styleclass="Normal" style="page-break-before:always;"><text style="background-color:#ffff00;">Hier soll der Editor im Studio beschrieben werden.</text></para>
   </body>
 </topic>
