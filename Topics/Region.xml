@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" modified="2023-08-24T08:29:29.363+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
+<topic template="Default" status="Needs Review" modified="2023-08-24T11:39:38.253+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>Region</title>
   <body>
     <header>
       <para styleclass="Heading1">Region</para>
     </header>
-    <para styleclass="Heading3">Wirkbereich</para>
+    <para styleclass="Heading3" style="page-break-before:always;">Wirkbereich</para>
     <para styleclass="Normal">GVL_&lt;Sequence1&gt;_Driver</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
     <para styleclass="Normal">{region &quot;GVL: Input&quot;}, {region &quot;GVL: Output&quot;}</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Beschreibung</para>
-    <para styleclass="Heading3"><text styleclass="Normal">In Kombination mit dem Attribut HARDWARE(true) erfolgt eine Deklaration als</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> </text><text styleclass="Code Example" style="font-weight:normal; font-style:italic; text-decoration:none; color:#339966;">&quot;GVL: Input&quot;</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> </text><text styleclass="Normal">oder</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> </text><text styleclass="Code Example" style="font-weight:normal; font-style:italic; text-decoration:none; color:#339966;">&quot;GVL: Output&quot;</text><text styleclass="Normal">.</text></para>
-    <para styleclass="Normal">Beispiel:<text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> </text><text styleclass="Code Example" style="font-weight:bold; font-style:normal; text-decoration:none; color:#3366ff;">AT</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> %I*</text>,<text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> </text><text styleclass="Code Example" style="font-weight:bold; font-style:normal; text-decoration:none; color:#3366ff;">AT</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> %Q*</text></para>
+    <para styleclass="Heading3"><text styleclass="Normal">In Kombination mit dem Attribut HARDWARE(true) erfolgt eine Deklaration als</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">&#32;</text><text styleclass="Code Example" style="font-weight:normal; font-style:italic; text-decoration:none; color:#339966;">&quot;GVL: Input&quot;</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">&#32;</text><text styleclass="Normal">oder</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">&#32;</text><text styleclass="Code Example" style="font-weight:normal; font-style:italic; text-decoration:none; color:#339966;">&quot;GVL: Output&quot;</text><text styleclass="Normal">.</text></para>
+    <para styleclass="Normal">Beispiel:<text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">&#32;</text><text styleclass="Code Example" style="font-weight:bold; font-style:normal; text-decoration:none; color:#3366ff;">AT</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> %I*</text>,<text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">&#32;</text><text styleclass="Code Example" style="font-weight:bold; font-style:normal; text-decoration:none; color:#3366ff;">AT</text><text styleclass="Code Example" style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;"> %Q*</text></para>
     <para styleclass="Normal"></para>
     <para styleclass="Achtung">Hinweis: Dies gilt nur bei Beckhoff-Systeme </para>
   </body>

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-08-23T13:32:52.505+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-08-24T11:33:38.836+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>INPUTMODE</title>
   <body>
     <header>
       <para styleclass="Heading1">INPUTMODE</para>
     </header>
-    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Heading3" style="page-break-before:always;">Deklarationsbereich</para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Objektbereich<text styleclass="Normal">&#32;</text></para>

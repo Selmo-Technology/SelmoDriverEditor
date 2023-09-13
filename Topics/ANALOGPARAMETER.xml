@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" modified="2023-08-24T08:26:06.663+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd" status="Needs Review">
+<topic template="Default" status="Needs Review" modified="2023-08-24T11:31:44.861+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>ANALOGPARAMETER</title>
   <body>
     <header>
       <para styleclass="Heading1">ANALOGPARAMETER</para>
     </header>
-    <para styleclass="Heading3">Deklarationsbereich</para>
+    <para styleclass="Heading3" style="page-break-before:always;">Deklarationsbereich</para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_INPUT">VAR_INPUT</link>, <link displaytype="text" defaultstyle="true" type="topiclink" href="VAR_OUTPUT">VAR_OUTPUT</link></para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Objektbereich</para>
-    <para styleclass="Normal">Zone In, Zone InOut  , Zone Out</para>
+    <para styleclass="Normal">Zone In, Zone InOut &#160;, Zone Out</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
     <para styleclass="Normal">[ANALOGPARAMETER(ValueX1)]</para>
