@@ -39,6 +39,12 @@
         <topicref type="topic" id="451474455548668" build="ALL" modified="2023-08-09T13:37:29.476Z" icon="0" href="ERRORDELAY">
           <caption translate="true">ERRORDELAY</caption>
         </topicref>
+        <topicref type="topic" id="45214749823940" build="ALL" modified="2023-10-17T13:17:38.565Z" icon="0" href="GHOSTMODE">
+          <caption translate="true">GHOSTMODE</caption>
+        </topicref>
+        <topicref type="topic" id="452164044561395" build="ALL" modified="2023-10-17T13:18:13.438Z" icon="0" href="GHOSTMODEDELAY">
+          <caption translate="true">GHOSTMODEDELAY</caption>
+        </topicref>
         <topicref type="topic" id="451613297048905" build="ALL" modified="2023-08-23T12:13:28.660Z" icon="0" href="HARDWARE">
           <caption translate="true">HARDWARE</caption>
         </topicref>
