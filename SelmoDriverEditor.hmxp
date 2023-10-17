@@ -158,7 +158,6 @@
       <config-value name="make0status">*</config-value>
       <config-value name="make3include">HTML</config-value>
       <config-value name="make3status">*</config-value>
-      <config-group name="bookmarks"/>
       <config-value name="make4include">PDF</config-value>
       <config-value name="make4status">*</config-value>
     </config-group>

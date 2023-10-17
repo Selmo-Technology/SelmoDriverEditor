@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-08-24T11:34:11.501+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-10-17T11:41:07.283+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>OUTPUTGROUP</title>
   <body>
     <header>
@@ -13,7 +13,7 @@
     <para styleclass="Normal">Zone InOut, Zone Out</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
-    <para styleclass="Normal">[ZONEGROUPNAME(Conveyor)]</para>
+    <para styleclass="Normal">[OUTPUTGROUP(Conveyor)]</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Beschreibung</para>
     <para styleclass="Normal">Die Output-Group-Funktion ermöglicht die Verbindung von mehreren Zonen desselben Typs. Hierbei wird nur ein gemeinsamer Ausgang für alle Zonen innerhalb der Gruppe genutzt. Das bedeutet, dass wenn Sie mehrere Zonen in einer Gruppe zusammenfassen, alle diese Zonen steuern einen Ausgang. </para>
