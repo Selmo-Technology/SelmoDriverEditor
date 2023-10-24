@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-10-20T12:05:47.162+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-08-24T11:34:06.389+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>OUTPUTDESCRIPTION</title>
   <body>
     <header>
@@ -13,14 +13,12 @@
     <para styleclass="Normal">Zone InOut, Zone Out</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Syntax</para>
-    <para styleclass="Normal">[OUTPUTDESCRIPTION(*Output Text)]</para>
+    <para styleclass="Normal">[OUTPUTDESCRIPTION(Output Text)]</para>
     <para styleclass="Normal"></para>
     <para styleclass="Heading3">Beschreibung</para>
     <para styleclass="Normal">In der Programmierung von PLCs ist es wichtig, dass jede Ausgangsvariable im Code eine aussagekräftige Beschreibung erhält. Eine solche Beschreibung hilft anderen Programmierern oder Wartungspersonal, den Code leichter zu verstehen und zu bearbeiten. Die Beschreibung der Ausgangsvariable sollte idealerweise den Zweck und die Funktionsweise der Variable beschreiben.</para>
     <para styleclass="Normal">Durch eine klare und präzise Beschreibung der Ausgangsvariable kann auch sichergestellt werden, dass sie richtig konfiguriert und kalibriert ist, bevor sie in das PLC-Programm integriert wird. Außerdem hilft sie bei der Fehlersuche und Fehlerbehebung im Code, indem sie es dem Programmierer ermöglicht, schnell festzustellen, welche Ausgangsvariablen betroffen sind. Die Beschreibung der Ausgangsvariable sollte daher als wichtiger Bestandteil der Dokumentation des PLC-Programms angesehen werden, um die Effizienz, Wartbarkeit und Fehlerfreiheit des Codes zu erhöhen.</para>
     <para styleclass="Normal"><image src="StudioOutputProperty.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[Studio]]></caption></image></para>
     <para styleclass="Normal"><image src="PLCOutputDescription.png" scale="100.00%" figurelistinclude="0"><caption><![CDATA[PLC]]></caption></image></para>
-    <para styleclass="Normal"></para>
-    <para styleclass="Normal"><text style="font-size:8pt; vertical-align:super;">*use </text><link displaytype="text" defaultstyle="true" type="topiclink" href="Shortcodes" style="font-size:8pt; vertical-align:super;">shortcodes</link></para>
   </body>
 </topic>

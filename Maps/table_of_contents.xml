@@ -129,12 +129,6 @@
         <topicref type="topic" id="45161517930869" build="ALL" modified="2023-08-23T09:40:46.403Z" icon="0" href="ZONETYPE">
           <caption translate="true">ZONETYPE</caption>
         </topicref>
-        <topicref type="topic" id="452223505256231" build="ALL" modified="2023-10-23T08:30:16.220Z" icon="0" href="OUTPUTDISTRIBUTION">
-          <caption translate="true">OUTPUTDISTRIBUTION</caption>
-        </topicref>
-        <topicref type="topic" id="452223341627890" build="ALL" modified="2023-10-23T08:51:47.097Z" icon="0" href="INPUTPARAMETER">
-          <caption translate="true">INPUTPARAMETER</caption>
-        </topicref>
       </topicref>
       <topicref type="topic" id="45162302502623" build="ALL" modified="2023-08-24T08:31:47.262Z" icon="0" href="HEADER">
         <caption translate="true">HEADER</caption>
@@ -156,12 +150,6 @@
       </topicref>
       <topicref type="topic" id="451615524973234" build="ALL" modified="2023-08-23T12:07:05.211Z" icon="0" href="Region">
         <caption translate="true">Region</caption>
-      </topicref>
-      <topicref type="topic" id="452195221628634" build="ALL" modified="2023-10-20T12:02:07.434Z" icon="0" href="Shortcodes">
-        <caption translate="true">Shortcodes</caption>
-        <topicref type="topic" id="452223988887650" build="ALL" modified="2023-10-23T08:35:31.581Z" icon="0" href="Friendlyname">
-          <caption translate="true">@Friendlyname</caption>
-        </topicref>
       </topicref>
     </topicref>
     <topicref type="topic" id="451625204573802" build="ALL" modified="2023-08-24T08:29:52.785Z" icon="0" href="Code">
