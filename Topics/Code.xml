@@ -2,14 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 <topic template="Default" status="Needs Review" modified="2023-10-24T11:41:04.238+02:00" lasteditedby="VerenaPichler" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
 =======
 <topic template="Default" status="Needs Review" modified="2023-10-24T11:40:48.249+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
 >>>>>>> 03c9664b66c20c9237b0f5cf11af5073840d2080
-=======
-<topic template="Default" status="Needs Review" modified="2023-10-24T11:39:19.266+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
->>>>>>> parent of fcd92ee (HMSAVE VerenaPichler@SO-NB-PICHLER)
 =======
 <topic template="Default" status="Needs Review" modified="2023-10-24T11:39:19.266+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
 >>>>>>> parent of fcd92ee (HMSAVE VerenaPichler@SO-NB-PICHLER)
@@ -22,14 +18,10 @@
     <para styleclass="Code Example"></para>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <para styleclass="Code Example"><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">//Test 1</text></para>
 =======
     <para styleclass="Code Example"><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">//Test 2</text></para>
 >>>>>>> 03c9664b66c20c9237b0f5cf11af5073840d2080
-=======
-    <para styleclass="Code Example"><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">//Test</text></para>
->>>>>>> parent of fcd92ee (HMSAVE VerenaPichler@SO-NB-PICHLER)
 =======
     <para styleclass="Code Example"><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">//Test</text></para>
 >>>>>>> parent of fcd92ee (HMSAVE VerenaPichler@SO-NB-PICHLER)
