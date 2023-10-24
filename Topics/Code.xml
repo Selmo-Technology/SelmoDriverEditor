@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-10-17T11:47:13.755+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-10-24T11:17:41.436+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>Code</title>
   <body>
     <header>
       <para styleclass="Heading1">Code</para>
     </header>
     <para styleclass="Code Example" style="page-break-before:always;"><text style="font-weight:normal; font-style:italic; text-decoration:none; color:#339966;">// read inputs</text><br/><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">InHomePos := LimitSwitchHome;</text><br/><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">InWorkPos := LimitSwitchWork;</text><br/><br/><text style="font-weight:normal; font-style:italic; text-decoration:none; color:#339966;">// write outputs</text><br/><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">ValveHome S= ToHomePos; </text><br/><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">ValveWork S= ToWorkPos;</text><br/><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">ValveHome R= ToWorkPos; </text><br/><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">ValveWork R= ToHomePos;</text></para>
+    <para styleclass="Code Example"></para>
+    <para styleclass="Code Example"><text style="font-weight:normal; font-style:normal; text-decoration:none; color:#000000;">//Test 1</text></para>
   </body>
 </topic>

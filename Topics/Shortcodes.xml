@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
+<topic template="Default" status="Under Construction" modified="2023-10-23T08:42:03.622+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+  <title>Shortcodes</title>
+  <body>
+    <header>
+      <para styleclass="Heading1">Shortcodes</para>
+    </header>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="Friendlyname">@Friendlyname</link></para>
+  </body>
+</topic>
