@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../helpproject.xsl" ?>
-<topic template="Default" status="Needs Review" modified="2023-10-17T13:23:17.946+02:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
+<topic template="Default" status="Needs Review" modified="2023-11-30T12:56:17.829+01:00" lasteditedby="GeraldOkorn" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../helpproject.xsd">
   <title>Attribute</title>
   <body>
     <header>
@@ -33,7 +33,7 @@
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="INPUTINVERTED">INPUTINVERTED</link></para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="INPUTMODE">INPUTMODE</link></para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="INVERTED">INVERTED</link></para>
-    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="KEEPALIVE">KEEPALIVE</link></para>
+    <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="KEEPALIVE">KEEPOUTPUTALIVE</link></para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="LIMITMAX">LIMITMAX</link></para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="LIMITMIN">LIMITMIN</link>&#32;</para>
     <para styleclass="Normal"><link displaytype="text" defaultstyle="true" type="topiclink" href="OUTPUTDESCRIPTION">OUTPUTDESCRIPTION</link></para>
