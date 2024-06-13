@@ -2,7 +2,15 @@
 Allgemeine Beschreibung der Selmo-Attribute, die für die Entwicklung der Funktion erforderlich sind.
 
 ## Deklaration
+Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben.
+```c
+///	[PERSISTENT(false)]
 ```
+
+<details>
+<summary> Code </summary>
+	
+```c
 /// Powered by OSCAT www.oscat.de
 /// Version 3.33
 /// Modified by Selmo Technology
@@ -315,10 +323,13 @@ VAR
 	xInit: BOOL;
 END_VAR
 ```
+</details>
+
 ## Übersicht der Attribute
 Insgesamt sind Attribute in der Programmierung grundlegend für die Organisation und Verarbeitung von Daten und Informationen in Programmen und Anwendungen.
 Bei Selmo werden folgende Attribute verwendet:
 
+[ANALOGPARAMETER](#1)
 - ANALOGPARAMETER
 - ANALOGFUNCTION
 - ANALOGVALUE
@@ -360,4 +371,6 @@ Bei Selmo werden folgende Attribute verwendet:
 - ZONEGROUPNAME
 - ZONENAME
 - ZONETYPE
+
+# 1
 
