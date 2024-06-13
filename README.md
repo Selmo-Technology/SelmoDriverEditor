@@ -293,10 +293,10 @@ Bei Selmo werden folgende Attribute verwendet:
 
 ### ANALOGPARAMETER
 Deklarationsbereich
-VAR_OUTPUT
+[VAR_OUTPUT](#var_output)
 
 Objektbereich 
-[Zone In](#zone-in) , [Zone InOut](#zone-inout) 
+[Zone In](#zone-in), [Zone InOut](#zone-inout) 
 
 Syntax
 ```cpp
@@ -312,6 +312,18 @@ GreaterEquals: Diese Funktion dient dazu, festzustellen, ob ein Wert gleich oder
 LessEquals: Hierbei wird überprüft, ob ein Wert kleiner oder gleich einem anderen ist. Dies kann in Szenarien verwendet werden, in denen Sie Aktionen basierend auf einer bestimmten Grenze auslösen möchten.
 
 ### ANALOGFUNCTION
+Deklarationsbereich
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
+
+Syntax
+```cpp
+[ANALOGPARAMETER(ValueX1)]
+```
+Beschreibung
+Dies repräsentiert einen Parameter, der dazu verwendet wird, einen bestimmten Wert oder eine Variable zu identifizieren, die in einem Vergleich oder einer Operation verwendet werden soll.
 
 ### ANALOGVALUE
 
