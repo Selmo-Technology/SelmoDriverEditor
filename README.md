@@ -329,7 +329,7 @@ END_VAR
 Insgesamt sind Attribute in der Programmierung grundlegend für die Organisation und Verarbeitung von Daten und Informationen in Programmen und Anwendungen.
 Bei Selmo werden folgende Attribute verwendet:
 
-- [ANALOGPARAMETER](###analogparameter)
+- [ANALOGPARAMETER](##analogparameter)
 - [ANALOGFUNCTION](###analogfunction)
 - [ANALOGVALUE](###analogvalue)
 - [AUTORESET](###autoreset)
@@ -371,7 +371,7 @@ Bei Selmo werden folgende Attribute verwendet:
 [ZONENAME
 [ZONETYPE
 
-### ANALOGPARAMETER
+## ANALOGPARAMETER
 
 ### ANALOGPARAMETER
 
