@@ -3,6 +3,49 @@ Allgemeine Beschreibung der Selmo-Attribute, die für die Entwicklung der Funkti
 
 ## Deklaration
 Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben.
+
+### Header
+Hier wird die Funktion so ausführlich wie möglich beschrieben
+```cpp
+/// Powered by OSCAT www.oscat.de
+/// Version 3.33
+/// Modified by Selmo Technology
+/// A PID controller with dynamic anti-wind up and manual control
+///
+/// version 1.3	
+/// programmer	og         
+/// tested by	hm   
+/// [GROUP(Control engineering)] 
+```
+
+### VAR_IN_OUT
+Ist für Ansteuerung von realer Hardware vorgesehen.
+#### Input 
+```cpp  
+///	[PERSISTENT(false)]
+///	[HARDWARE(in)]
+///	[DESCRIPTION(Actual Value)]
+///	
+In_ActValue: REAL;
+```       
+#### Output
+```cpp  
+///	[PERSISTENT(false)]
+///	[HARDWARE(out)]
+///	[DESCRIPTION(Controller output)]	 
+///	
+Out_Y: REAL;
+```
+
+#### VAR_INPUT
+Der VAR_INPUT wird zum verbinden des Outputs der Zone verwendet. 
+
+#### Zone InOut
+
+```cpp
+
+```
+
 ```cpp
 ///	[PERSISTENT(false)]
 ```
@@ -16,7 +59,7 @@ Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben
 /// Modified by Selmo Technology
 /// A PID controller with dynamic anti-wind up and manual control
 ///
-/// version 1.2	
+/// version 1.3	
 /// programmer	og         
 /// tested by	hm   
 /// [GROUP(Control engineering)] 
@@ -27,6 +70,11 @@ VAR_IN_OUT
 	///	[DESCRIPTION(Controller output)]	 
 	///	
 	Out_Y: REAL;
+	///	[PERSISTENT(false)]
+	///	[HARDWARE(out)]
+	///	[DESCRIPTION(Controller output)]	 
+	///	
+	Out_Y_Int: INT;
 	///	[PERSISTENT(false)]
 	///	[HARDWARE(in)]
 	///	[DESCRIPTION(Actual Value)]
@@ -45,7 +93,7 @@ VAR_INPUT
 	///	[OUTPUTDESCRIPTION(Controller on)]
 	///	[HARDWAREOUTPUT(false)] 
 	///	[OUTPUTMODE(digital)]
-	/// 	[RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
+	/// [RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
 	///	[ANALOGPARAMETER()] 
 	///	[ANALOGVALUE()] 
 	///	[PAIRCHECK(true)] 
@@ -315,6 +363,21 @@ VAR_INPUT
 	///	
 	{attribute 'input_constant' := ''}
 	Diff: REFERENCE TO REAL;
+	///		 	 
+	///	[PARAMETER(true)] 
+	///	[TYPE(input)]
+	///	[HMIDISPLAYTEXT(output inverted)]
+	///	[INITIALVALUE()] 
+	///	[UNIT()] 
+	///	[LIMITMIN()] 
+	///	[LIMITMAX()] 
+	///	[DECIMALDIGITS()] 
+	///	[SECTION()]
+	///	[DISABLEAUTO(false)] 
+	///	[BUTTONMODE(toggle)] 
+	///	
+	{attribute 'input_constant' := ''}
+	INV: BOOL;
 END_VAR
 VAR
 	fbCTRL_PID: CTRL_PID;
@@ -372,8 +435,6 @@ Bei Selmo werden folgende Attribute verwendet:
 [ZONETYPE
 
 ## ANALOGPARAMETER
-
-### ANALOGPARAMETER
 
 ### ANALOGFUNCTION
 
