@@ -1,6 +1,4 @@
-# Attribute
-Allgemeine Beschreibung der Selmo-Attribute, die für die Entwicklung der Funktion erforderlich sind.
-
+# Selmo Funktion
 ## Deklaration
 Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben.
 
