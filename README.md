@@ -115,6 +115,115 @@ TimeoutComm: BOOL;
 ActValue: REFERENCE TO REAL;
 ```
 
+### VAR_OUTPUT
+VAR_OUTPUT wird verwendet, um die Eingänge der Zone zu verbinden.  
+#### Zone InOut
+```cpp
+///	 			  
+///	[CMZ(false)] 
+///	[PARAMETER(false)] 
+///	[ZONETYPE(inout)] 
+///	[ZONENAME(Controller on)] 
+///	[ZONEGROUPNAME()] 
+///  	[CLONE2INVERTED(false)]
+///	[HMIDISPLAYTEXT(Controller is on)] 
+///	[HARDWAREINPUT(false)] 	
+///	[INPUTDESCRIPTION(Controller is on)] 
+///	[INPUTINVERTED(false)] 
+///	[INPUTDELAY(0)] 
+///	[INPUTMODE(digital)] 
+///	[RELATED_PARAMETERS()]
+///	[ANALOGPARAMETER()] 
+///	[ANALOGFUNCTION()] 
+///	[ANALOGVALUE()] 
+///	
+ControllerIsOn: BOOL;
+```
+
+#### Zone In
+```cpp
+///	 			  
+///	[CMZ(false)] 
+///	[PARAMETER(false)] 
+///	[ZONETYPE(in)] 
+///	[ZONENAME(Controller Limit)] 
+///	[ZONEGROUPNAME()] 
+///  	[CLONE2INVERTED(false)]
+///	[HMIDISPLAYTEXT(Controller Limit detection)] 
+///	[HARDWAREINPUT(false)] 	
+///	[INPUTDESCRIPTION(Controller Limit detection)] 
+///	[INPUTINVERTED(false)] 
+///	[INPUTDELAY(0)] 
+///	[INPUTMODE(digital)] 
+///	[RELATED_PARAMETERS()]
+///	[ANALOGPARAMETER()] 
+///	[ANALOGFUNCTION()] 
+///	[ANALOGVALUE()] 
+///	
+LimitDetection: BOOL;
+```
+
+### VAR
+```cpp
+fbCTRL_PID: CTRL_PID;
+F_TRIGAuto: F_TRIG;
+/// One cycle initialization
+xInit: BOOL;
+```
+
+### Code
+Die Programmierung der Funktion erfolgt hier.
+```cpp
+//initialize procedure
+IF NOT xInit THEN 
+	ControllerIsOn := FALSE; 
+	ControllerIsOff := TRUE; 
+
+	xInit:=TRUE;
+END_IF
+
+F_TRIGAuto(CLK:=stSeqIf.xSeqAutomaticReleased, Q=> );
+
+//falling edge signal disables the controller
+IF F_TRIGAuto.Q OR NOT stSeqIf.xNoCMZFault THEN
+	ControllerIsOn := FALSE; 
+	ControllerIsOff := TRUE; 
+ELSE
+	ControllerIsOn S= ControllerOn; 
+	ControllerIsOn R= ControllerOff; 
+	ControllerIsOff S= ControllerOff; 
+	ControllerIsOff R= ControllerOn;  
+END_IF
+
+ActValue := In_ActValue;
+
+fbCTRL_PID(
+	ACT:=ActValue , 
+	SET:=SetPoint , 
+	SUP:=Suppression , 
+	OFS:=OutputOffset , 
+	M_I:=ManualInputValue , 
+	MAN:=ControllerIsOff , 
+	RST:=ControllerIsOff , 
+	KP:=P_KP, 
+	TN:=I_TN , 
+	TV:=D_TV , 
+	LL:=LL , 
+	LH:=LH , 
+	//Y=>Y , 
+	DIFF=>Diff , 
+	LIM=>LimitDetection );
+		
+IF INV THEN 
+	Out_Y := fbCTRL_PID.Y*-1;
+ELSE
+	Out_Y := fbCTRL_PID.Y;
+END_IF
+
+Y:=Out_Y;
+Out_Y_Int := REAL_TO_INT(Out_Y);
+```
+
 <details>
 <summary> Deklarations Beispiel </summary>
 	
@@ -498,8 +607,6 @@ Bei Selmo werden folgende Attribute verwendet:
 - [ZONEGROUPNAME](###zonegroupname)
 - [ZONENAME](###zonename)
 - [ZONETYPE](###zonetype)
-
-### ANALOGPARAMETER
 
 ### ANALOGPARAMETER
 
