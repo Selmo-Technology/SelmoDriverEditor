@@ -250,9 +250,9 @@ Insgesamt sind Attribute in der Programmierung grundlegend für die Organisation
 Bei Selmo werden folgende Attribute verwendet:
 
 - [ANALOGPARAMETER](#analogparameter)
-- [ANALOGFUNCTION](###analogfunction)
-- [ANALOGVALUE](###analogvalue)
-- [AUTORESET](###autoreset)
+- [ANALOGFUNCTION](#analogfunction)
+- [ANALOGVALUE](#analogvalue)
+- [AUTORESET](#autoreset)
 - [BUTTONMODE](###buttonmode) 
 - [CLONE2INVERTED](###clone2inverted)
 - [CMZ](###cmz)
