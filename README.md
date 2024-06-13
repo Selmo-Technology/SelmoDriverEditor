@@ -253,45 +253,63 @@ Bei Selmo werden folgende Attribute verwendet:
 - [ANALOGFUNCTION](#analogfunction)
 - [ANALOGVALUE](#analogvalue)
 - [AUTORESET](#autoreset)
-- [BUTTONMODE](###buttonmode) 
-- [CLONE2INVERTED](###clone2inverted)
-- [CMZ](###cmz)
-- [DECIMALDIGITS](###decimaldigits) 
-- [DECLARATIONASINPUT](###declarationasinput)
-- [DISABLEAUTO](###disableauto)
-- [ERRORDELAY](###errordelay)
-- [GHOSTMODE](###ghostmode)
-- [GHOSTMODEDELAYDELAY](###ghostmodedelaydelay)
-- [HARDWARE](###hardware)
-- [HARDWAREINPUT](###hardwareinput)
-- [HARDWAREOUTPUT](###hardwareoutput)
-- [HMIBUTTON](###hmibutton)
-- [HMIBUTTONTEXT](###hmibuttontext)
-- [HMIDISPLAYTEXT](###hmidisplaytext)
-- [INPUTDELAY](###inputdelay)
-- [INPUTDESCRIPTION](###inputdescription)
-- [INPUTINVERTED](###inputinverted)
-- [INPUTMODE](###inputmode)
-- [INVERTED](###inverted)
-- [KEEPOUTPUTALIVE](###keepoutputalive)
-- [LIMITMAX](###limitmax)
-- [LIMITMIN](###limitmin)
-- [OUTPUTDESCRIPTION](###outputdescription)
-- [OUTPUTGROUP](###outputgroup)
-- [OUTPUTMODE](###outputmode)
-- [PAIRCHECK](###paircheck)
-- [PAIRCHECKGROUP](###paircheckgroup)
-- [PARAMETER](###parameter)
-- [PERSISTENT](###persistent)
-- [RELATED_PARAMETERS](###related_parameters)
-- [SECTION](###section)
-- [TYPE](###type)
-- [UNIT](###unit)
-- [ZONEGROUPNAME](###zonegroupname)
-- [ZONENAME](###zonename)
-- [ZONETYPE](###zonetype)
+- [BUTTONMODE](#buttonmode) 
+- [CLONE2INVERTED](#clone2inverted)
+- [CMZ](#cmz)
+- [DECIMALDIGITS](#decimaldigits) 
+- [DECLARATIONASINPUT](#declarationasinput)
+- [DISABLEAUTO](#disableauto)
+- [ERRORDELAY](#errordelay)
+- [GHOSTMODE](#ghostmode)
+- [GHOSTMODEDELAYDELAY](#ghostmodedelaydelay)
+- [HARDWARE](#hardware)
+- [HARDWAREINPUT](#hardwareinput)
+- [HARDWAREOUTPUT](#hardwareoutput)
+- [HMIBUTTON](#hmibutton)
+- [HMIBUTTONTEXT](#hmibuttontext)
+- [HMIDISPLAYTEXT](#hmidisplaytext)
+- [INPUTDELAY](#inputdelay)
+- [INPUTDESCRIPTION](#inputdescription)
+- [INPUTINVERTED](#inputinverted)
+- [INPUTMODE](#inputmode)
+- [INVERTED](#inverted)
+- [KEEPOUTPUTALIVE](#keepoutputalive)
+- [LIMITMAX](#limitmax)
+- [LIMITMIN](#limitmin)
+- [OUTPUTDESCRIPTION](#outputdescription)
+- [OUTPUTGROUP](#outputgroup)
+- [OUTPUTMODE](#outputmode)
+- [PAIRCHECK](#paircheck)
+- [PAIRCHECKGROUP](#paircheckgroup)
+- [PARAMETER](#parameter)
+- [PERSISTENT](#persistent)
+- [RELATED_PARAMETERS](#related_parameters)
+- [SECTION](#section)
+- [TYPE](#type)
+- [UNIT](#unit)
+- [ZONEGROUPNAME](#zonegroupname)
+- [ZONENAME](#zonename)
+- [ZONETYPE](#zonetype)
 
-# ANALOGPARAMETER
+### ANALOGPARAMETER
+Deklarationsbereich
+VAR_OUTPUT
+
+Objektbereich 
+[Zone In](#zone-in) , [Zone InOut](#zone-inout) 
+
+Syntax
+```cpp
+[ANALOGFUNCTION(Equals)], [ANALOGFUNCTION(GreaterThan)], [ANALOGFUNCTION(LessThan)], [ANALOGFUNCTION(GreaterEquals)], [ANALOGFUNCTION(LessEquals)]
+```
+
+Beschreibung
+Die in eckigen Klammern angegebenen Ausdrücke, wie "Equals" (Gleich), "GreaterThan" (Größer als), "LessThan" (Kleiner als), "GreaterEquals" (Größer oder gleich) und "LessEquals" (Kleiner oder gleich), repräsentieren verschiedene Vergleichsoperationen oder Bedingungen, die in der "ANALOGFUNCTION" verwendet werden können.
+Equals: Diese Funktion dient dazu, zu überprüfen, ob zwei analoge Werte gleich sind. Sie könnte beispielsweise verwendet werden, um festzustellen, ob ein bestimmtes analoges Signal einem anderen entspricht.
+GreaterThan: Diese Funktion wird verwendet, um zu überprüfen, ob ein analoger Wert größer ist als ein anderer. Dies kann nützlich sein, um Bedingungen zu definieren, die erfüllt werden müssen, wenn ein Wert eine bestimmte Schwelle überschreitet.
+LessThan: Im Gegensatz zur vorherigen Funktion überprüft diese, ob ein analoger Wert kleiner ist als ein anderer. Das kann in Situationen hilfreich sein, in denen die Größe eines Wertes von Bedeutung ist.
+GreaterEquals: Diese Funktion dient dazu, festzustellen, ob ein Wert gleich oder größer als ein anderer ist. Das ist nützlich, wenn Sie eine Aktion auslösen möchten, wenn ein Wert einen bestimmten Schwellenwert erreicht oder überschreitet.
+LessEquals: Hierbei wird überprüft, ob ein Wert kleiner oder gleich einem anderen ist. Dies kann in Szenarien verwendet werden, in denen Sie Aktionen basierend auf einer bestimmten Grenze auslösen möchten.
 
 ### ANALOGFUNCTION
 
