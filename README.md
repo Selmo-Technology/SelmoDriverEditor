@@ -5,7 +5,7 @@ Allgemeine Beschreibung der Selmo-Attribute, die für die Entwicklung der Funkti
 Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben.
 
 ### Header
-Hier wird die Funktion so ausführlich wie möglich beschrieben
+Hier wird die Funktion so detailliert wie möglich beschrieben.
 ```cpp
 /// Powered by OSCAT www.oscat.de
 /// Version 3.33
@@ -19,7 +19,8 @@ Hier wird die Funktion so ausführlich wie möglich beschrieben
 ```
 
 ### VAR_IN_OUT
-Ist für Ansteuerung von realer Hardware vorgesehen.
+Dies ist vorgesehen, um reale Hardware zu steuern.
+
 #### Input 
 ```cpp  
 ///	[PERSISTENT(false)]
@@ -37,21 +38,85 @@ In_ActValue: REAL;
 Out_Y: REAL;
 ```
 
-#### VAR_INPUT
-Der VAR_INPUT wird zum verbinden des Outputs der Zone verwendet. 
+### VAR_INPUT
+VAR_INPUT wird verwendet, um die Ausgänge der Zone zu verbinden, CMZs zu generieren und zugehörige Parameter zu erstellen.  
 
 #### Zone InOut
-
 ```cpp
-
+///		 
+///	[PARAMETER(false)] 
+///	[ZONETYPE(inout)]
+///	[ZONENAME(Controller on)] 
+///	[ZONEGROUPNAME()]      
+///	[HMIBUTTON(true)] 
+///	[HMIBUTTONTEXT(Controller on)]  
+///	[HMIDISPLAYTEXT(Controller on)]
+///	[OUTPUTDESCRIPTION(Controller on)]
+///	[HARDWAREOUTPUT(false)] 
+///	[OUTPUTMODE(digital)]
+///     [RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
+///	[ANALOGPARAMETER()] 
+///	[ANALOGVALUE()] 
+///	[PAIRCHECK(true)] 
+///	[PAIRCHECKGROUP(1)]
+///	
+ControllerOn: BOOL;
 ```
 
+#### Zone Out
+```cpp       
+///	[PARAMETER(false)] 
+///	[ZONETYPE(out)]
+///	[ZONENAME(Set)] 
+///	[ZONEGROUPNAME(Set)]   
+///	[HMIBUTTON(true)] 
+///	[HMIBUTTONTEXT(Set)]  
+///	[HMIDISPLAYTEXT(Set)]
+///	[OUTPUTDESCRIPTION(Set)]
+///	[HARDWAREOUTPUT(false)] 
+///	[OUTPUTMODE(digital)] 
+///	[ANALOGPARAMETER()] 
+///	[ANALOGVALUE()] 
+///	[PAIRCHECK(false)] 
+///	[PAIRCHECKGROUP()]
+///   
+Set : BOOL;
+```
+
+#### CMZ
+```cpp  
+///	[CMZ(true)] 
+///	[PARAMETER(false)] 
+///	[HMIDISPLAYTEXT(Timeout communication)]  
+///	[INVERTED(false)]
+///	[DECLARATIONASINPUT(false)] 
+///	[AUTORESET(false)]   
+///	[ERRORDELAY(0)] 
+///  
+TimeoutComm: BOOL;
+```
+
+#### Parameter
 ```cpp
-///	[PERSISTENT(false)]
+///		 	 
+///	[PARAMETER(true)] 
+///	[TYPE(output)]
+///	[HMIDISPLAYTEXT(Actual Value)] 
+///	[INITIALVALUE()]	 
+///	[UNIT()] 
+///	[LIMITMIN()] 
+///	[LIMITMAX()] 
+///	[DECIMALDIGITS(4)] 
+///	[SECTION()]
+///	[DISABLEAUTO(false)] 
+///	[BUTTONMODE()] 
+///	
+{attribute 'input_constant' := ''}
+ActValue: REFERENCE TO REAL;
 ```
 
 <details>
-<summary> Code </summary>
+<summary> Deklarations Beispiel </summary>
 	
 ```cpp
 /// Powered by OSCAT www.oscat.de
@@ -93,7 +158,7 @@ VAR_INPUT
 	///	[OUTPUTDESCRIPTION(Controller on)]
 	///	[HARDWAREOUTPUT(false)] 
 	///	[OUTPUTMODE(digital)]
-	/// [RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
+	///     [RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
 	///	[ANALOGPARAMETER()] 
 	///	[ANALOGVALUE()] 
 	///	[PAIRCHECK(true)] 
@@ -392,49 +457,51 @@ END_VAR
 Insgesamt sind Attribute in der Programmierung grundlegend für die Organisation und Verarbeitung von Daten und Informationen in Programmen und Anwendungen.
 Bei Selmo werden folgende Attribute verwendet:
 
-- [ANALOGPARAMETER](##analogparameter)
+- [ANALOGPARAMETER](###analogparameter)
 - [ANALOGFUNCTION](###analogfunction)
 - [ANALOGVALUE](###analogvalue)
 - [AUTORESET](###autoreset)
 - [BUTTONMODE](###buttonmode) 
 - [CLONE2INVERTED](###clone2inverted)
-- [CMZ]
-[DECIMALDIGITS] 
-[DECLARATIONASINPUT
-[DISABLEAUTO
-[ERRORDELAY
-[GHOSTMODE
-[GHOSTMODEDELAYDELAY
-[HARDWARE
-[HARDWAREINPUT
-[HARDWAREOUTPUT
-[HMIBUTTON
-[HMIBUTTONTEXT
-[HMIDISPLAYTEXT
-[INPUTDELAY
-[INPUTDESCRIPTION
-[INPUTINVERTED
-[INPUTMODE
-[INVERTED
-[KEEPOUTPUTALIVE
-[LIMITMAX
-[LIMITMIN 
-[OUTPUTDESCRIPTION
-[OUTPUTGROUP
-[OUTPUTMODE
-[PAIRCHECK
-[PAIRCHECKGROUP
-[PARAMETER
-[PERSISTENT
-[RELATED_PARAMETERS
-[SECTION
-[TYPE
-[UNIT 
-[ZONEGROUPNAME
-[ZONENAME
-[ZONETYPE
+- [CMZ](###cmz)
+- [DECIMALDIGITS](###decimaldigits) 
+- [DECLARATIONASINPUT](###declarationasinput)
+- [DISABLEAUTO](###disableauto)
+- [ERRORDELAY](###errordelay)
+- [GHOSTMODE](###ghostmode)
+- [GHOSTMODEDELAYDELAY](###ghostmodedelaydelay)
+- [HARDWARE](###hardware)
+- [HARDWAREINPUT](###hardwareinput)
+- [HARDWAREOUTPUT](###hardwareoutput)
+- [HMIBUTTON](###hmibutton)
+- [HMIBUTTONTEXT](###hmibuttontext)
+- [HMIDISPLAYTEXT](###hmidisplaytext)
+- [INPUTDELAY](###inputdelay)
+- [INPUTDESCRIPTION](###inputdescription)
+- [INPUTINVERTED](###inputinverted)
+- [INPUTMODE](###inputmode)
+- [INVERTED](###inverted)
+- [KEEPOUTPUTALIVE](###keepoutputalive)
+- [LIMITMAX](###limitmax)
+- [LIMITMIN](###limitmin)
+- [OUTPUTDESCRIPTION](###outputdescription)
+- [OUTPUTGROUP](###outputgroup)
+- [OUTPUTMODE](###outputmode)
+- [PAIRCHECK](###paircheck)
+- [PAIRCHECKGROUP](###paircheckgroup)
+- [PARAMETER](###parameter)
+- [PERSISTENT](###persistent)
+- [RELATED_PARAMETERS](###related_parameters)
+- [SECTION](###section)
+- [TYPE](###type)
+- [UNIT](###unit)
+- [ZONEGROUPNAME](###zonegroupname)
+- [ZONENAME](###zonename)
+- [ZONETYPE](###zonetype)
 
-## ANALOGPARAMETER
+### ANALOGPARAMETER
+
+### ANALOGPARAMETER
 
 ### ANALOGFUNCTION
 
