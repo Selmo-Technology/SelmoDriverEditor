@@ -316,12 +316,13 @@ Deklarationsbereich
 Objektbereich
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
+Beschreibung
+Dies repräsentiert einen Parameter, der dazu verwendet wird, einen bestimmten Wert oder eine Variable zu identifizieren, die in einem Vergleich oder einer Operation verwendet werden soll.
+
 Syntax
 ```cpp
 [ANALOGPARAMETER(ValueX1)]
 ```
-Beschreibung
-Dies repräsentiert einen Parameter, der dazu verwendet wird, einen bestimmten Wert oder eine Variable zu identifizieren, die in einem Vergleich oder einer Operation verwendet werden soll.
 
 ### ANALOGVALUE
 
