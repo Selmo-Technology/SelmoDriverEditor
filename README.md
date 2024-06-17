@@ -290,48 +290,101 @@ Bei Selmo werden folgende Attribute verwendet:
 - [ZONETYPE](#zonetype)
 
 ### ANALOGPARAMETER
-Deklarationsbereich
+Deklarationsbereich  
 [VAR_OUTPUT](#var_output)
 
-Objektbereich 
-[Zone In](#zone-in), [Zone InOut](#zone-inout) 
+Objektbereich  
+[Zone In](#zone-in) , [Zone InOut](#zone-inout) 
 
-Syntax
+Syntax  
 ```cpp
 [ANALOGFUNCTION(Equals)], [ANALOGFUNCTION(GreaterThan)], [ANALOGFUNCTION(LessThan)], [ANALOGFUNCTION(GreaterEquals)], [ANALOGFUNCTION(LessEquals)]
 ```
 
-Beschreibung
+Beschreibung  
 Die in eckigen Klammern angegebenen Ausdrücke, wie "Equals" (Gleich), "GreaterThan" (Größer als), "LessThan" (Kleiner als), "GreaterEquals" (Größer oder gleich) und "LessEquals" (Kleiner oder gleich), repräsentieren verschiedene Vergleichsoperationen oder Bedingungen, die in der "ANALOGFUNCTION" verwendet werden können.
-Equals: Diese Funktion dient dazu, zu überprüfen, ob zwei analoge Werte gleich sind. Sie könnte beispielsweise verwendet werden, um festzustellen, ob ein bestimmtes analoges Signal einem anderen entspricht.
-GreaterThan: Diese Funktion wird verwendet, um zu überprüfen, ob ein analoger Wert größer ist als ein anderer. Dies kann nützlich sein, um Bedingungen zu definieren, die erfüllt werden müssen, wenn ein Wert eine bestimmte Schwelle überschreitet.
-LessThan: Im Gegensatz zur vorherigen Funktion überprüft diese, ob ein analoger Wert kleiner ist als ein anderer. Das kann in Situationen hilfreich sein, in denen die Größe eines Wertes von Bedeutung ist.
-GreaterEquals: Diese Funktion dient dazu, festzustellen, ob ein Wert gleich oder größer als ein anderer ist. Das ist nützlich, wenn Sie eine Aktion auslösen möchten, wenn ein Wert einen bestimmten Schwellenwert erreicht oder überschreitet.
-LessEquals: Hierbei wird überprüft, ob ein Wert kleiner oder gleich einem anderen ist. Dies kann in Szenarien verwendet werden, in denen Sie Aktionen basierend auf einer bestimmten Grenze auslösen möchten.
+- Equals: Diese Funktion dient dazu, zu überprüfen, ob zwei analoge Werte gleich sind. Sie könnte beispielsweise verwendet werden, um festzustellen, ob ein bestimmtes analoges Signal einem anderen entspricht.
+- GreaterThan: Diese Funktion wird verwendet, um zu überprüfen, ob ein analoger Wert größer ist als ein anderer. Dies kann nützlich sein, um Bedingungen zu definieren, die erfüllt werden müssen, wenn ein Wert eine bestimmte Schwelle überschreitet.
+- LessThan: Im Gegensatz zur vorherigen Funktion überprüft diese, ob ein analoger Wert kleiner ist als ein anderer. Das kann in Situationen hilfreich sein, in denen die Größe eines Wertes von Bedeutung ist.
+- GreaterEquals: Diese Funktion dient dazu, festzustellen, ob ein Wert gleich oder größer als ein anderer ist. Das ist nützlich, wenn Sie eine Aktion auslösen möchten, wenn ein Wert einen bestimmten Schwellenwert erreicht oder überschreitet.
+- LessEquals: Hierbei wird überprüft, ob ein Wert kleiner oder gleich einem anderen ist. Dies kann in Szenarien verwendet werden, in denen Sie Aktionen basierend auf einer bestimmten Grenze auslösen möchten.
 
 ### ANALOGFUNCTION
-Deklarationsbereich
+Deklarationsbereich  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich
+Objektbereich  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
-Beschreibung
-Dies repräsentiert einen Parameter, der dazu verwendet wird, einen bestimmten Wert oder eine Variable zu identifizieren, die in einem Vergleich oder einer Operation verwendet werden soll.
-
-Syntax
+Syntax  
 ```cpp
 [ANALOGPARAMETER(ValueX1)]
 ```
+Beschreibung  
+Dies repräsentiert einen Parameter, der dazu verwendet wird, einen bestimmten Wert oder eine Variable zu identifizieren, die in einem Vergleich oder einer Operation verwendet werden soll.
 
 ### ANALOGVALUE
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
+
+Syntax  
+```cpp
+[ANALOGVALUE(100)]
+```
+Beschreibung  
+Dies dient zur Festlegung eines konkreten analogen Werts in einem programmatischen Kontext.
 
 ### AUTORESET
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[CMZ](#cmz)
+
+Syntax  
+```cpp
+[AUTORESET(false)], [AUTORESET(true)]
+```
+Beschreibung  
+Ein Auto Reset im Fehlerfall bezeichnet eine Funktion, bei der ein Fehler automatisch zurückgesetzt wird, ohne dass manuell eingegriffen werden muss. Wenn ein Fehler auftritt, wird dieser automatisch erkannt und der Systemzustand wird auf den normalen Betriebszustand zurückgesetzt. Diese Funktion wird häufig in automatisierten Systemen verwendet, um sicherzustellen, dass der Betrieb fortgesetzt werden kann, ohne dass ein Bediener manuell eingreifen muss, um den Fehler zu beheben. Das Auto Reset im Fehlerfall ist besonders nützlich in kritischen Anwendungen, bei denen ein sofortiges Eingreifen notwendig ist, um Ausfallzeiten oder Schäden an der Ausrüstung zu minimieren. 
 
 ### BUTTONMODE 
-![](data:image/png;base64,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)
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[PARAMETER](#parameter)
+
+Syntax  
+```cpp
+[BUTTONMODE(On)], [BUTTONMODE(Off)], [BUTTONMODE(Switch)], [BUTTONMODE(Toggle)]
+```
+Beschreibung  
+Boolesche Parameter können als Buttons angelegt werden. Es stehen verschiedene Modi zur Verfügung:
+
+- On: Schaltet die Parametervariable auf "true" beim Betätigen des HMI-Buttons.
+- Off: Schaltet die Parametervariable auf "false" beim Betätigen des HMI-Buttons.
+- Switch: Schaltet die Parametervariable auf "true" beim Drücken und auf "false" beim Loslassen des HMI-Buttons.
+- Toggle: Wechselt bei jedem Tastendruck den Zustand der Parametervariable zwischen "true" und "false".
+
+Wenn der HMI-Button im grünen Zustand ist, entspricht dies dem Wert 'true' der Parametervariable. Wenn der Button im grauen Zustand ist, entspricht dies dem Wert 'false'.
 
 ### CLONE2INVERTED
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax  
+```cpp
+[CLONE2INVERTED(false)], [CLONE2INVERTED(true)]
+```
+Beschreibung  
+Um ein Signal vollständig abzusichern kann eine invertierte Zone-In eingefügt werden. Die invertierte Zone überwacht den sicheren Übergang des mit der Zone verknüpften Signals von true auf false. Beispielsweise werden Taster, Sensoren etc. damit überwacht. Dadurch kann eine Fehlbedienung verhindert werden.  Mithilfe des Buttons Clone to inverted wird eine invertierte Zone der ausgewählten Zone-In eingefügt.
 
 ### CMZ
 
