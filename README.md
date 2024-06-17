@@ -418,12 +418,12 @@ Syntax
 Beschreibung  
 DD (Decimal Digits) steht für die Anzahl der Dezimalstellen, die bei der Anzeige des Parameterwerts berücksichtigt werden sollen. Diese Anzahl wird üblicherweise im Parameter-Setup definiert und kann je nach Anwendung variieren. Wenn der Wert von DD auf 0 gesetzt wird, bedeutet dies, dass keine Nachkommastellen angezeigt werden sollen und der Wert als Ganzzahl dargestellt wird. Wenn DD auf -1 gesetzt wird, werden keine Nachkommastellen berücksichtigt, wenn DD auf 1 gesetzt wird, wird eine Dezimalstelle berücksichtigt und so weiter. Die Anzahl der Dezimalstellen ist wichtig, um eine korrekte und genaue Anzeige des Parameterwerts sicherzustellen. Wenn die Anzahl der Dezimalstellen nicht ausreichend ist, können wichtige Informationen verloren gehen oder ungenau dargestellt werden. Wenn die Anzahl der Dezimalstellen zu hoch ist, kann dies die Lesbarkeit des Wertes beeinträchtigen. Daher ist es wichtig, die Anzahl der Dezimalstellen sorgfältig zu definieren und zu überwachen, um eine genaue und lesbare Darstellung des Parameterwerts zu gewährleisten.
 
-DD -1 (Input/Output)
-![HMI](images/HMIParameterDD_Default.png) ![HMI](images/HMIParameterDD_Default_Out.png)
-DD 0 (Input/Output)
-![HMI](images/HMIParameterDD_Zero.png) ![HMI](images/HMIParameterDD_Zero_Out.png)
-DD 1 (Input/Output)
-![HMI](images/HMIParameterDD_One.png) ![HMI](images/HMIParameterDD_One_Out.png)
+DD -1 (Input/Output)  
+![HMI](images/HMIParameterDD_Default.png) ![HMI](images/HMIParameterDD_Default_Out.png)  
+DD 0 (Input/Output)  
+![HMI](images/HMIParameterDD_Zero.png) ![HMI](images/HMIParameterDD_Zero_Out.png)  
+DD 1 (Input/Output)  
+![HMI](images/HMIParameterDD_One.png) ![HMI](images/HMIParameterDD_One_Out.png)  
 
 ### DECLARATIONASINPUT
 
