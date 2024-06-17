@@ -372,6 +372,8 @@ Boolesche Parameter können als Buttons angelegt werden. Es stehen verschiedene 
 
 Wenn der HMI-Button im grünen Zustand ist, entspricht dies dem Wert 'true' der Parametervariable. Wenn der Button im grauen Zustand ist, entspricht dies dem Wert 'false'.
 
+![HMI](images/HMIParameterButtonMode.png)
+
 ### CLONE2INVERTED
 Deklarationsbereich  
 [VAR_OUTPUT](#var_output)
