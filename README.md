@@ -388,7 +388,7 @@ Syntax
 Beschreibung  
 Um ein Signal vollständig abzusichern kann eine invertierte Zone-In eingefügt werden. Die invertierte Zone überwacht den sicheren Übergang des mit der Zone verknüpften Signals von true auf false. Beispielsweise werden Taster, Sensoren etc. damit überwacht. Dadurch kann eine Fehlbedienung verhindert werden.  Mithilfe des Buttons Clone to inverted wird eine invertierte Zone der ausgewählten Zone-In eingefügt.
 
-![Studio](images/Invertierte-Zone-In.png)
+![Studio](images/InvertierteZoneIn.png)
 
 ### CMZ
 Deklarationsbereich  
