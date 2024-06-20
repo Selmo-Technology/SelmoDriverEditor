@@ -426,14 +426,54 @@ DD 1 (Input/Output)
 ![HMI](images/HMIParameterDD_One.png) ![HMI](images/HMIParameterDD_One_Out.png)  
 
 ### DECLARATIONASINPUT
+### DECLARATIONASINPUT
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[CMZ](#cmz)
+
+Syntax  
+```cpp
+[DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]
+```
+Beschreibung  
+Wenn Sie die CMZ als `True` deklarieren, wird sie als Hardware-Eingang deklariert und mit dem `AT %I*` Attribut  in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.
+
+![PLC](images/PLCCMZDeclerationAsHard.png)
 
 ### DISABLEAUTO
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Parameter](#parameter)
+
+Syntax
+```cpp
+[DISABLEAUTO(false)], [DISABLEAUTO(true)], 
+```
+
+Beschreibung
+Die Funktion "Disable Input in Automatic" ermöglicht es, das Ändern von Eingabevariablen zu sperren, solange der Automatik-Modus aktiv ist. Dies bedeutet, dass Benutzer den Wert einer Eingabevariablen nicht manuell ändern können, solange das System im Automatik-Modus arbeitet. Diese Funktion ist besonders nützlich, um die Sicherheit und Integrität des Systems zu gewährleisten, da sie verhindert, dass Benutzer versehentlich den Betrieb des Systems beeinträchtigen, während es in einem automatisierten Betriebsmodus arbeitet. Wenn der Automatik-Modus deaktiviert ist, können Benutzer den Wert der Eingabevariablen wieder manuell ändern. Diese Funktion ist besonders hilfreich in industriellen Anwendungen, in denen es wichtig ist, dass das System sicher und zuverlässig funktioniert, auch wenn es von unterschiedlichen Benutzern betrieben wird.
 
 ### ERRORDELAY
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[CMZ](#cmz)
+
+Syntax  
+```cpp
+[DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]
+```
+Beschreibung  
+Wenn Sie die CMZ als `True` deklarieren, wird sie als Hardware-Eingang deklariert und mit dem `AT %I*` Attribut  in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.
 
 ### GHOSTMODE
 
-### GHOSTMODEDELAYDELAY
+### GHOSTMODEDELAY
 
 ### HARDWARE
 
