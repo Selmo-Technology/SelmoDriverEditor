@@ -475,9 +475,40 @@ Wenn Sie die CMZ als `True` deklarieren, wird sie als Hardware-Eingang deklarier
 
 ### GHOSTMODEDELAY
 
-### HARDWARE
-
 ### HARDWAREINPUT
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax  
+```cpp
+[DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]
+```
+Beschreibung  
+Wenn Sie den Input als `true` deklarieren, wird sie als Hardware-Eingang deklariert und mit dem `AT %I*` Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.
+
+![Studio](images/StudioInputDeclarationAsHInputProperty.png)  
+![PLC](images/PLCInputDeclarationAsHInputProperty.png)
+
+### HARDWAREOUTPUT
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[HARDWAREOUTPUT(false)], [HARDWAREOUTPUT(true)] 
+```
+
+Beschreibung
+Wenn Sie den Output als `true` deklarieren, wird er als Hardware-Ausgang deklariert und mit dem `AT %Q*` Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert auf einem physikalischen Ausgang des Systems sendet, wie beispielsweise von einem Ventil oder einem Umrichter.
+
+![Studio](images/StudioOutputDeclerationAsHardProperty.png)  
+![PLC](images/PLCOutputDeclerationAsHOutput.png)
 
 ### HARDWAREOUTPUT
 
