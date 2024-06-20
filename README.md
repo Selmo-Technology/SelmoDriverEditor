@@ -565,6 +565,19 @@ Wird hier ein Text eingetragen wirkt der Text nur in der HMI und wird als Anzeig
 ![HMI](images/HmiDisplayText.png)  
 
 ### INPUTDELAY
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax  
+```cpp
+[INPUTDELAY(1000)]
+```
+Beschreibung  
+Bitte geben Sie an, um wie viele Millisekunden das Eingangssignal verzögert werden soll. Die Verzögerung bezieht sich auf den Zeitunterschied zwischen dem Zeitpunkt, zu dem das Signal empfangen wird, und dem Zeitpunkt, zu dem es im System verarbeitet wird. Eine Verzögerung kann beabsichtigt sein, um das Signal auf eine bestimmte Weise zu modifizieren oder um sicherzustellen, dass es synchron mit anderen Signalen verarbeitet wird. Die genaue Zeitdauer, um die das Signal verzögert werden soll, hängt von den Anforderungen des Systems und der Art des Signals ab, das verarbeitet wird.
+
 
 ### INPUTDESCRIPTION
 
