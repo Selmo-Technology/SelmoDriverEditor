@@ -548,7 +548,7 @@ Der HMI Button Text ist der Bezeichner des Handbetrieb-Buttons der Zone und gibt
 
 ### HMIDISPLAYTEXT
 Deklarationsbereich  
-[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output), [VAR_IN_OUT](#var_in_out)
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
 Objektbereich  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Output](#zone-output), [Parameter](#parameter), [CMZ](#cmz)
@@ -679,32 +679,243 @@ Der maximale Eingabewert für einen Parameter ist der höchste Wert, der für di
 ![HMI](images/HMIParameterLH.png)
 
 ### LIMITMIN 
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Parameter](#parameter)
+
+Syntax
+```cpp
+[LIMITMIN(0)]
+```
+
+Beschreibung  
+Der minimale Eingabewert für einen Input-Parameter ist der kleinste Wert, der für diesen Parameter akzeptabel ist. Dieser Wert kann je nach PLC-Datentyp variieren, und es sind nur bestimmte Eingabeformate zulässig, die mit dem Datentyp des Parameters übereinstimmen. Es ist wichtig sicherzustellen, dass der minimale Eingabewert im richtigen Format eingegeben wird, da ansonsten Fehlfunktionen oder Fehler im Programm auftreten können. Eine fehlerhafte Eingabe kann beispielsweise zu einer Überlastung des Systems oder einer unerwarteten Reaktion führen. Daher sollte der minimale Eingabewert sorgfältig dokumentiert und eingegeben werden, um die korrekte Funktionsweise des Systems oder der Maschine zu gewährleisten. Wenn ein Wert für einen Parameter eingegeben wird, der unter dem definierten unteren Grenzwert (LL) liegt, wird dieser Grenzwert in der Regel rot markiert, um anzuzeigen, dass die Eingabe nicht akzeptiert wird. Das System oder die Maschine verweigert die Eingabe des Wertes, um zu verhindern, dass das System fehlerhaft oder instabil wird. Die rote Markierung soll dem Benutzer auf den Fehler hinweisen und ihm helfen, den Eingabewert entsprechend zu korrigieren.
+
+![HMI](images/HMIParameterLL.png)
 
 ### OUTPUTDESCRIPTION
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[OUTPUTDESCRIPTION(Output Text)]
+```
+
+Beschreibung  
+In der Programmierung von PLCs ist es wichtig, dass jede Ausgangsvariable im Code eine aussagekräftige Beschreibung erhält. Eine solche Beschreibung hilft anderen Programmierern oder Wartungspersonal, den Code leichter zu verstehen und zu bearbeiten. Die Beschreibung der Ausgangsvariable sollte idealerweise den Zweck und die Funktionsweise der Variable beschreiben.
+Durch eine klare und präzise Beschreibung der Ausgangsvariable kann auch sichergestellt werden, dass sie richtig konfiguriert und kalibriert ist, bevor sie in das PLC-Programm integriert wird. Außerdem hilft sie bei der Fehlersuche und Fehlerbehebung im Code, indem sie es dem Programmierer ermöglicht, schnell festzustellen, welche Ausgangsvariablen betroffen sind. Die Beschreibung der Ausgangsvariable sollte daher als wichtiger Bestandteil der Dokumentation des PLC-Programms angesehen werden, um die Effizienz, Wartbarkeit und Fehlerfreiheit des Codes zu erhöhen.
+
+![Studio](images/StudioOutputProperty.png)
+![PLC](images/PLCOutputDescription.png)
 
 ### OUTPUTGROUP
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[OUTPUTGROUP(Conveyor)]
+```
+
+Beschreibung  
+Die Output-Group-Funktion ermöglicht die Verbindung von mehreren Zonen desselben Typs. Hierbei wird nur ein gemeinsamer Ausgang für alle Zonen innerhalb der Gruppe genutzt. Das bedeutet, dass wenn Sie mehrere Zonen in einer Gruppe zusammenfassen, alle diese Zonen steuern einen Ausgang. 
+
+![Studio](images/StudioOutputGroupNext.png)
+![PLC](images/PLCOutputDescription.png)
 
 ### OUTPUTMODE
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[OUTPUTMODE(digital)], [OUTPUTMODE(analogvalue)], [OUTPUTMODE(analogparameter)], [OUTPUTMODE(parameterlist)]
+```
+
+Beschreibung  
+Die Art des Signals wird durch den Modus des Ausgangs bestimmt. Dabei kann es sich entweder um ein digitales oder analoges Signal oder um einen Parameter handeln. Der Modus des Ausgangs gibt somit an, welche Art von Signal erwartet wird und wie dieses Signal interpretiert werden soll. Wenn der Ausgangsmodus beispielsweise auf "digital" eingestellt ist, sendet das System ein Signal, das aus einem diskreten Werte besteht, während bei einem analogen Ausgangsmodus ein kontinuierliches Signal gesendet wird. Bei einem Parametermodus hingegen wird ein Wert gesendet, der einen bestimmten Parameter repräsentiert. Insgesamt hängt die Art des Signals, welches ein System empfängt und verarbeitet, maßgeblich vom eingestellten Ausgangsmodus ab. 
+
+![Studio](images/StudioOutputMode.png)
 
 ### PAIRCHECK
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax
+```cpp
+[PAIRCHECK(false)], [PAIRCHECK(true)]
+```
+
+Beschreibung  
+Wenn PairCheck aktiv ist, wird die Zone mit anderen Zonen überprüft, um sicherzustellen, dass bestimmte Bedingungen erfüllt sind, wie beispielsweise das Vorhandensein von Signal 1 und Signal 2, die nicht zeitgleich auftreten dürfen.
 
 ### PAIRCHECKGROUP
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax
+```cpp
+[PAIRCHECKGROUP(1)]
+```
+
+Beschreibung  
+Die PairCheckGroup-Nummer wird verwendet, um festzulegen, ob eine Zone-In einer Prüfung mit anderen Zonen derselben Gruppe zusammengefasst werden soll. Diese Gruppierung ermöglicht es, bestimmte Prüfungen auf mehrere Zonen anzuwenden, die dieselbe PairCheckGroup-Nummer aufweisen, um sicherzustellen, dass die Ergebnisse konsistent sind. 
 
 ### PARAMETER
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Parameter](#parameter)
+
+Syntax
+```cpp
+[PARAMETER(false)], [PARAMETER(true)]
+```
+
+Beschreibung  
+Wird verwendet, um einen Parameter im Parameter Layer der Sequence anzulegen.
 
 ### PERSISTENT
+Deklarationsbereich  
+[VAR_IN_OUT](#var_in_out)
+
+Objektbereich  
+[GVL_<Sequence1>_Driver](#GVL_Sequence1_Driver)
+
+Syntax
+```cpp
+[PERSISTENT(false)], [PERSISTENT(true)]
+```
+
+Beschreibung  
+Wird verwendet, um eine Variable in der GVL_<Sequence1>_Driver Persistent zu deklarieren.
 
 ### RELATED_PARAMETERS
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out), [Parameter](#parameter)
+
+Syntax
+```cpp
+[RELATED_PARAMETERS(ValueY1,ValueY2,ValueY3)]
+```
+
+Beschreibung  
+Wenn es erforderlich ist, mehrere Parameter gleichzeitig einzufügen, können Sie mithilfe dieses Attributs auswählen, welche Parameter in die Einfügung einbezogen werden sollen. Dies setzt voraus, dass der jeweilige Parameter in der Deklaration vorhanden ist.
 
 ### SECTION
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Parameter](#parameter), [CMZ](#cmz)
+
+Syntax
+```cpp
+[SECTION(Setup 1)]
+```
+
+Beschreibung  
+Die Eigenschaft "Section" kann verwendet werden, um Parameter zu gruppieren und sie in einem gemeinsamen Menüpunkt in der HMI darzustellen. Wenn Parameter mit der gleichen Section-Eigenschaft markiert sind, werden sie automatisch in der gleichen Gruppe zusammengefasst. Durch das Gruppieren von Parametern in Sektionen wird das Menü übersichtlicher und benutzerfreundlicher gestaltet, da verwandte Parameter zusammengefasst werden und der Benutzer sie leichter finden und ändern kann. Die Section-Eigenschaft kann beliebig benannt werden, um die Gruppe von Parametern entsprechend zu beschreiben. Ein Beispiel für eine sinnvolle Benennung einer Section-Eigenschaft ist "Kommunikationseinstellungen" für Parameter, die sich auf die Kommunikation des Systems beziehen. Durch die Verwendung von Sections kann die Handhabung von Parametern einfacher und effizienter gestaltet werden, was insgesamt zu einer verbesserten Benutzererfahrung führt.
+
+![HMI](images/HMIParameterSection.png)
 
 ### TYPE
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Parameter](#parameter)
+
+Syntax
+```cpp
+[TYPE(output)], [TYPE(input)]
+```
+
+Beschreibung  
+Legt fest, um welche Art von Parameter es sich handelt.
 
 ### UNIT 
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Parameter](#parameter)
+
+Syntax
+```cpp
+[UNIT(%)]
+```
+
+Beschreibung  
+Die Anzeige-Einheit des Parameters in der HMI bezieht sich auf die Einheit, in der der Parameter auf dem HMI-Display des Systems oder der Maschine angezeigt wird. Die Einheit kann je nach PLC-Datentyp variieren, jedoch sind alle Einträge gültig und werden nicht auf ihre Richtigkeit oder Konsistenz mit anderen Parametern oder dem System überprüft. Es ist jedoch wichtig, dass die Einheit für den Benutzer verständlich ist und ihm dabei hilft, den Parameter richtig zu interpretieren. Eine korrekte und eindeutige Anzeige-Einheit kann dazu beitragen, Missverständnisse zu vermeiden und die Bedienung des Systems zu erleichtern. Daher sollte die Anzeige-Einheit des Parameters sorgfältig gewählt und richtig dokumentiert werden, um ein korrektes Verständnis und eine fehlerfreie Verwendung des Systems oder der Maschine zu gewährleisten.
+
+![HMI](images/HMIParameterUnit.png)
 
 ### ZONEGROUPNAME
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
+
+Syntax
+```cpp
+[ZONEGROUPNAME(Group A)]
+```
+
+Beschreibung  
+Mit der Eigenschaft ZONEGROUPNAME können Zonen zu einer Gruppe zusammengefasst werden. Es dient außerdem als Filtername für die Filterfunktion.
+
+![HMI](images/StudioGroupName.png)
 
 ### ZONENAME
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
+
+Syntax
+```cpp
+[ZONEGROUPNAME(Group A)]
+```
+
+Beschreibung  
+Zonennamen können explizit benannt werden, indem die Eigenschaft ZONENAME verwendet wird.
 
 ### ZONETYPE
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
+
+Syntax
+```cpp
+[ZONETYPE(In)], [ZONETYPE(InOut)], ZONETYPE(Out)]
+```
+
+Beschreibung  
+Wird verwendet, um eine Zone im System Layer der Sequence anzulegen.
