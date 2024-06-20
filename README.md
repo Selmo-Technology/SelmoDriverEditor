@@ -454,7 +454,7 @@ Syntax
 [DISABLEAUTO(false)], [DISABLEAUTO(true)], 
 ```
 
-Beschreibung
+Beschreibung  
 Die Funktion "Disable Input in Automatic" ermöglicht es, das Ändern von Eingabevariablen zu sperren, solange der Automatik-Modus aktiv ist. Dies bedeutet, dass Benutzer den Wert einer Eingabevariablen nicht manuell ändern können, solange das System im Automatik-Modus arbeitet. Diese Funktion ist besonders nützlich, um die Sicherheit und Integrität des Systems zu gewährleisten, da sie verhindert, dass Benutzer versehentlich den Betrieb des Systems beeinträchtigen, während es in einem automatisierten Betriebsmodus arbeitet. Wenn der Automatik-Modus deaktiviert ist, können Benutzer den Wert der Eingabevariablen wieder manuell ändern. Diese Funktion ist besonders hilfreich in industriellen Anwendungen, in denen es wichtig ist, dass das System sicher und zuverlässig funktioniert, auch wenn es von unterschiedlichen Benutzern betrieben wird.
 
 ### ERRORDELAY
@@ -504,7 +504,7 @@ Syntax
 [HARDWAREOUTPUT(false)], [HARDWAREOUTPUT(true)] 
 ```
 
-Beschreibung
+Beschreibung  
 Wenn Sie den Output als `true` deklarieren, wird er als Hardware-Ausgang deklariert und mit dem `AT %Q*` Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert auf einem physikalischen Ausgang des Systems sendet, wie beispielsweise von einem Ventil oder einem Umrichter.
 
 ![Studio](images/StudioOutputDeclerationAsHardProperty.png)  
@@ -522,7 +522,7 @@ Syntax
 [HMIBUTTON(false)], [HMIBUTTON(true)]
 ```
 
-Beschreibung
+Beschreibung  
 Der HMI-Button ist eine Benutzerschnittstelle, die nur in der Betriebsart Handbetrieb funktioniert und verwendet wird, um den Ausgang zu steuern. Im Gegensatz zur automatischen Betriebsart, bei der das System automatisch arbeitet, gibt der Handbetrieb dem Benutzer die Möglichkeit, manuelle Eingriffe vorzunehmen.
 Der HMI-Button wird betätigt, um den Ausgang zu steuern, bis ein Feedback-Signal (Input der Zone) aktiv wird. Das Feedback-Signal gibt dem System eine Rückmeldung darüber, ob der gewünschte Zustand erreicht wurde oder ob Änderungen vorgenommen werden müssen. Wenn die MXIC-Kreuzverriegelung aktiv ist, kann der Ausgang nicht gesteuert werden und die HMI zeigt Informationen zur Zone an, mit der die Verriegelung stattfindet.
 Die MXIC-Kreuzverriegelung ist eine Sicherheitsfunktion, die verhindert, dass die Zone nur unter bestimmten Voraussetzungen (Zonen x y befinden sich in einem definierten Zustand) aktiviert werden darf. Dies ist insbesondere bei kritischen Anwendungen wichtig, bei denen das gleichzeitige Auftreten von mehreren Ereignissen zu gefährlichen Situationen führen kann. Durch die Verwendung des HMI-Buttons in Kombination mit der MXIC-Kreuzverriegelung wird sichergestellt, dass nur der gewünschte Ausgang aktiviert wird und dass potenzielle Gefahren vermieden werden.
@@ -541,7 +541,7 @@ Syntax
 [HMIBUTTONTEXT(Button Zone 9)]
 ```
 
-Beschreibung
+Beschreibung  
 Der HMI Button Text ist der Bezeichner des Handbetrieb-Buttons der Zone und gibt eine klare Funktionsbezeichnung der Zone wieder, um dem Benutzer eine intuitive Bedienung zu ermöglichen.
 
 ![HMI](images/HMIButtonText.png)
@@ -558,7 +558,7 @@ Syntax
 [HMIDISPLAYTEXT(Zone 7 On)]
 ```
 
-Beschreibung
+Beschreibung  
 Wird hier ein Text eingetragen wirkt der Text nur in der HMI und wird als Anzeige Text übernommen. Die Eigenschaft Name wird in der HMI überschrieben.
 
 ![Studio](images/StudioHmiDisplayText.png)  
