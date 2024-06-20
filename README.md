@@ -259,7 +259,7 @@ Bei Selmo werden folgende Attribute verwendet:
 - [DISABLEAUTO](#disableauto)
 - [ERRORDELAY](#errordelay)
 - [GHOSTMODE](#ghostmode)
-- [GHOSTMODEDELAYDELAY](#ghostmodedelaydelay)
+- [GHOSTMODEDELAY](#ghostmodedelay)
 - [HARDWARE](#hardware)
 - [HARDWAREINPUT](#hardwareinput)
 - [HARDWAREOUTPUT](#hardwareoutput)
