@@ -642,7 +642,7 @@ Dies ist nur mit booleschen Variablen Typen möglich
 
 ![PLC](images/PLCCMZDeclerationAsHardPrg.png)
 
-### INPUTMODE
+### KEEPOUTPUTALIVE
 Deklarationsbereich  
 [VAR_INPUT](#var_input)
 
@@ -651,21 +651,32 @@ Objektbereich
 
 Syntax
 ```cpp
-[HMIDISPLAYTEXT(Zone 7 On)]
+[KEEPOUTPUTALIVE(false)], [KEEPOUTPUTALIVE(true)]
 ```
 
 Beschreibung  
 Die Ansteuerung des Ausgangs bietet zwei unterschiedliche Herangehensweisen, die durch die Eigenschaft "Keep Alive" bestimmt werden:
-Wenn die Eigenschaft "Keep Alive" auf den Wert "False" gesetzt ist, erfolgt die Standardansteuerung. In diesem Fall wird der Ausgang automatisch deaktiviert, sobald das Feedback(Input) erreicht wurde.
-Wenn hingegen die Eigenschaft "Keep Alive" auf den Wert "True" gesetzt wird, wird der Ausgang unabhängig vom Feedback gesteuert. Das bedeutet, dass die Ansteuerung des Ausgangs nicht von der Rückmeldung abhängt und dieser aktiv bleibt, ungeachtet des Feedbacks.
+- Wenn die Eigenschaft "Keep Alive" auf den Wert "False" gesetzt ist, erfolgt die Standardansteuerung. In diesem Fall wird der Ausgang automatisch deaktiviert, sobald das Feedback(Input) erreicht wurde.
+- Wenn hingegen die Eigenschaft "Keep Alive" auf den Wert "True" gesetzt wird, wird der Ausgang unabhängig vom Feedback gesteuert. Das bedeutet, dass die Ansteuerung des Ausgangs nicht von der Rückmeldung abhängt und dieser aktiv bleibt, ungeachtet des Feedbacks.
 
 ![Studio](images/StudioOutputKeepAlive.png)
 
-### INVERTED
-
-### KEEPOUTPUTALIVE
-
 ### LIMITMAX
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Parameter](#parameter)
+
+Syntax
+```cpp
+[LIMITMAX(100)]
+```
+
+Beschreibung  
+Der maximale Eingabewert für einen Parameter ist der höchste Wert, der für diesen Parameter akzeptabel ist. Wenn ein Wert für einen Parameter eingegeben wird, der über dem definierten oberen Grenzwert (LH) liegt, wird dieser Grenzwert in der Regel rot markiert, um anzuzeigen, dass die Eingabe nicht akzeptiert wird. Ähnlich wie bei einem zu niedrigen Eingabewert, verweigert das System die Eingabe des Wertes, um zu verhindern, dass das System fehlerhaft oder instabil wird. Der obere Grenzwert ist wichtig, um sicherzustellen, dass die Maschine oder das System innerhalb sicherer und effizienter Betriebsparameter arbeitet. Eine korrekte Eingabe des Parameters ist wichtig, um die Leistung und Sicherheit des Systems zu gewährleisten. Daher sollte der obere Grenzwert sorgfältig dokumentiert und eingehalten werden, um zu verhindern, dass das System fehlerhaft oder instabil wird.
+
+![HMI](images/HMIParameterLH.png)
 
 ### LIMITMIN 
 
