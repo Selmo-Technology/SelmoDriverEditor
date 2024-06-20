@@ -578,7 +578,6 @@ Syntax
 Beschreibung  
 Bitte geben Sie an, um wie viele Millisekunden das Eingangssignal verzögert werden soll. Die Verzögerung bezieht sich auf den Zeitunterschied zwischen dem Zeitpunkt, zu dem das Signal empfangen wird, und dem Zeitpunkt, zu dem es im System verarbeitet wird. Eine Verzögerung kann beabsichtigt sein, um das Signal auf eine bestimmte Weise zu modifizieren oder um sicherzustellen, dass es synchron mit anderen Signalen verarbeitet wird. Die genaue Zeitdauer, um die das Signal verzögert werden soll, hängt von den Anforderungen des Systems und der Art des Signals ab, das verarbeitet wird.
 
-
 ### INPUTDESCRIPTION
 Deklarationsbereich  
 [VAR_OUTPUT](#var_output)
@@ -598,8 +597,69 @@ Durch eine klare und präzise Beschreibung der Eingangsvariable kann auch sicher
 ![HMI](images/PLC_GVL_Sequence_IOs_InputDescription.png)
 
 ### INPUTINVERTED
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax  
+```cpp
+[INPUTINVERTED(false)], [INPUTINVERTED(true)]
+```
+Beschreibung  
+Bitte legen Sie fest, ob das Eingangssignal invertiert ist oder nicht. Das bedeutet, dass Sie entscheiden müssen, ob das Signal, das in ein bestimmtes System eingeht, in seiner Polarität umgekehrt ist oder nicht. Eine invertierte Signalpolarität bedeutet, dass das Signal in Bezug auf seine positive und negative Polarität umgekehrt ist. Es ist wichtig, diese Entscheidung zu treffen, da sie Auswirkungen auf die Art und Weise hat, wie das Signal im System verarbeitet wird.
 
 ### INPUTMODE
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax  
+```cpp
+[INPUTMODE(digital)], [INPUTMODE(analogvalue)], [INPUTMODE(analogparameter)], [INPUTMODE(parameterlist)]
+```
+Beschreibung
+Die Art des Signals wird durch den Modus des Eingangs bestimmt. Dabei kann es sich entweder um ein digitales oder analoges Signal oder um einen Parameter handeln. Der Modus des Eingangs gibt somit an, welche Art von Signal erwartet wird und wie dieses Signal interpretiert werden soll. Wenn der Eingangsmodus beispielsweise auf "digital" eingestellt ist, erwartet das System ein Signal, das aus diskreten Werten besteht, während bei einem analogen Eingangsmodus ein kontinuierliches Signal erwartet wird. Bei einem Parametermodus hingegen wird ein Wert erwartet, der einen bestimmten Parameter repräsentiert. Insgesamt hängt die Art des Signals, das ein System empfängt und verarbeitet, somit maßgeblich vom eingestellten Eingangsmodus ab.
+
+### INVERTED
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[CMZ](#cmz)
+
+Syntax
+```cpp
+[HMIDISPLAYTEXT(Zone 7 On)]
+```
+
+Beschreibung  
+Wenn das Feld "Inverted" aktiviert wird, wird der Wert der verknüpften Variable im PLC-Code der entsprechenden Ebene invertiert.
+Dies ist nur mit booleschen Variablen Typen möglich
+
+![PLC](images/PLCCMZDeclerationAsHardPrg.png)
+
+### INPUTMODE
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout)
+
+Syntax
+```cpp
+[HMIDISPLAYTEXT(Zone 7 On)]
+```
+
+Beschreibung  
+Die Ansteuerung des Ausgangs bietet zwei unterschiedliche Herangehensweisen, die durch die Eigenschaft "Keep Alive" bestimmt werden:
+Wenn die Eigenschaft "Keep Alive" auf den Wert "False" gesetzt ist, erfolgt die Standardansteuerung. In diesem Fall wird der Ausgang automatisch deaktiviert, sobald das Feedback(Input) erreicht wurde.
+Wenn hingegen die Eigenschaft "Keep Alive" auf den Wert "True" gesetzt wird, wird der Ausgang unabhängig vom Feedback gesteuert. Das bedeutet, dass die Ansteuerung des Ausgangs nicht von der Rückmeldung abhängt und dieser aktiv bleibt, ungeachtet des Feedbacks.
+
+![Studio](images/StudioOutputKeepAlive.png)
 
 ### INVERTED
 
