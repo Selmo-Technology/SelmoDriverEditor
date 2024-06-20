@@ -580,6 +580,22 @@ Bitte geben Sie an, um wie viele Millisekunden das Eingangssignal verzögert wer
 
 
 ### INPUTDESCRIPTION
+Deklarationsbereich  
+[VAR_OUTPUT](#var_output)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout)
+
+Syntax  
+```cpp
+[INPUTDESCRIPTION(Input Text)]
+```
+Beschreibung  
+In der Programmierung von PLCs ist es wichtig, dass jede Eingangsvariable im Code eine aussagekräftige Beschreibung erhält. Eine solche Beschreibung hilft anderen Programmierern oder Wartungspersonal, den Code leichter zu verstehen und zu bearbeiten. Die Beschreibung der Eingangsvariable sollte idealerweise den Zweck und die Funktionsweise der Variable beschreiben.
+Durch eine klare und präzise Beschreibung der Eingangsvariable kann auch sichergestellt werden, dass sie richtig konfiguriert und kalibriert ist, bevor sie in das PLC-Programm integriert wird. Außerdem hilft sie bei der Fehlersuche und Fehlerbehebung im Code, indem sie es dem Programmierer ermöglicht, schnell festzustellen, welche Eingangsvariablen betroffen sind. Die Beschreibung der Eingangsvariable sollte daher als wichtiger Bestandteil der Dokumentation des PLC-Programms angesehen werden, um die Effizienz, Wartbarkeit und Fehlerfreiheit des Codes zu erhöhen.
+
+![Studio](images/StudioInputDescriptionPorperty.png)  
+![HMI](images/PLC_GVL_Sequence_IOs_InputDescription.png)
 
 ### INPUTINVERTED
 
