@@ -510,13 +510,59 @@ Wenn Sie den Output als `true` deklarieren, wird er als Hardware-Ausgang deklari
 ![Studio](images/StudioOutputDeclerationAsHardProperty.png)  
 ![PLC](images/PLCOutputDeclerationAsHOutput.png)
 
-### HARDWAREOUTPUT
-
 ### HMIBUTTON
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[HMIBUTTON(false)], [HMIBUTTON(true)]
+```
+
+Beschreibung
+Der HMI-Button ist eine Benutzerschnittstelle, die nur in der Betriebsart Handbetrieb funktioniert und verwendet wird, um den Ausgang zu steuern. Im Gegensatz zur automatischen Betriebsart, bei der das System automatisch arbeitet, gibt der Handbetrieb dem Benutzer die Möglichkeit, manuelle Eingriffe vorzunehmen.
+Der HMI-Button wird betätigt, um den Ausgang zu steuern, bis ein Feedback-Signal (Input der Zone) aktiv wird. Das Feedback-Signal gibt dem System eine Rückmeldung darüber, ob der gewünschte Zustand erreicht wurde oder ob Änderungen vorgenommen werden müssen. Wenn die MXIC-Kreuzverriegelung aktiv ist, kann der Ausgang nicht gesteuert werden und die HMI zeigt Informationen zur Zone an, mit der die Verriegelung stattfindet.
+Die MXIC-Kreuzverriegelung ist eine Sicherheitsfunktion, die verhindert, dass die Zone nur unter bestimmten Voraussetzungen (Zonen x y befinden sich in einem definierten Zustand) aktiviert werden darf. Dies ist insbesondere bei kritischen Anwendungen wichtig, bei denen das gleichzeitige Auftreten von mehreren Ereignissen zu gefährlichen Situationen führen kann. Durch die Verwendung des HMI-Buttons in Kombination mit der MXIC-Kreuzverriegelung wird sichergestellt, dass nur der gewünschte Ausgang aktiviert wird und dass potenzielle Gefahren vermieden werden.
+
+![HMI](images/HMIButton.png)
 
 ### HMIBUTTONTEXT
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[HMIBUTTONTEXT(Button Zone 9)]
+```
+
+Beschreibung
+Der HMI Button Text ist der Bezeichner des Handbetrieb-Buttons der Zone und gibt eine klare Funktionsbezeichnung der Zone wieder, um dem Benutzer eine intuitive Bedienung zu ermöglichen.
+
+![HMI](images/HMIButtonText.png)
 
 ### HMIDISPLAYTEXT
+Deklarationsbereich  
+[VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output), [VAR_IN_OUT](#var_in_out)
+
+Objektbereich  
+[Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Output](#zone-output), [Parameter](#parameter), [CMZ](#cmz)
+
+Syntax
+```cpp
+[HMIDISPLAYTEXT(Zone 7 On)]
+```
+
+Beschreibung
+Wird hier ein Text eingetragen wirkt der Text nur in der HMI und wird als Anzeige Text übernommen. Die Eigenschaft Name wird in der HMI überschrieben.
+
+![Studio](images/StudioHmiDisplayText.png)  
+![HMI](images/HmiDisplayText.png)  
 
 ### INPUTDELAY
 
