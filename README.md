@@ -23,6 +23,7 @@ Dies ist vorgesehen, um reale Hardware zu steuern.
 ```cpp  
 ///	[PERSISTENT(false)]
 ///	[HARDWARE(in)]
+///	[ISREFERENCEGROUP(FALSE)]
 ///	[DESCRIPTION(Actual Value)]
 ///	
 In_ActValue: REAL;
@@ -31,6 +32,7 @@ In_ActValue: REAL;
 ```cpp  
 ///	[PERSISTENT(false)]
 ///	[HARDWARE(out)]
+///	[ISREFERENCEGROUP(FALSE)]
 ///	[DESCRIPTION(Controller output)]	 
 ///	
 Out_Y: REAL;
@@ -271,6 +273,7 @@ Bei Selmo werden folgende Attribute verwendet:
 - [INPUTINVERTED](#inputinverted)
 - [INPUTMODE](#inputmode)
 - [INVERTED](#inverted)
+- [ISREFERENCEGROUP](#isreferencegroup)
 - [KEEPOUTPUTALIVE](#keepoutputalive)
 - [LIMITMAX](#limitmax)
 - [LIMITMIN](#limitmin)
@@ -641,6 +644,21 @@ Wenn das Feld "Inverted" aktiviert wird, wird der Wert der verknüpften Variable
 Dies ist nur mit booleschen Variablen Typen möglich
 
 ![PLC](images/PLCCMZDeclerationAsHardPrg.png)
+
+### ISREFERENCEGROUP
+Deklarationsbereich  
+[VAR_IN_OUT](#var_inout)
+
+Objektbereich  
+nicht zutreffend
+
+Syntax  
+```cpp
+[ISREFERENCEGROUP(FALSE)]
+[ISREFERENCEGROUP(TRUE)]
+```
+Beschreibung  
+Dies deklariert eine InOut-Variable als Referenzgruppe die mit anderen Funktionen die gleiche Referent teilt. Ein Beispiel sind mehrere Motion-Funktionen welche die gleiche Achse (AXIS_REF) ansprechen.
 
 ### KEEPOUTPUTALIVE
 Deklarationsbereich  
