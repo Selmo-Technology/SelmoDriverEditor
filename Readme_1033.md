@@ -293,7 +293,7 @@ Selmo uses the following attributes:
 - [ZONETYPE](#zonetype)
 
 ### ANALOGPARAMETER
-Declaration area  
+Declaration area     
 [VAR_OUTPUT](#var_output)
 
 Object area   
