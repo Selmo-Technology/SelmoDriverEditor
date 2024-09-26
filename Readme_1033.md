@@ -1,9 +1,9 @@
-# Selmo Funktion
-## Deklaration
-Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben.
+# Selmo function
+## Declaration
+The attributes are only passed as comments in the declaration.
 
 ### Header
-Hier wird die Funktion so detailliert wie möglich beschrieben.
+The function is described here in as much detail as possible.
 ```cpp
 /// Powered by OSCAT www.oscat.de
 /// Version 3.33
@@ -17,7 +17,7 @@ Hier wird die Funktion so detailliert wie möglich beschrieben.
 ```
 
 ### VAR_IN_OUT
-Dies ist vorgesehen, um reale Hardware zu steuern.
+This is intended to control real hardware.
 
 #### Input 
 ```cpp  
@@ -39,7 +39,7 @@ Out_Y: REAL;
 ```
 
 ### VAR_INPUT
-VAR_INPUT wird verwendet, um die Ausgänge der Zone zu verbinden, CMZs zu generieren, zugehörige Parameter zu erstellen und Schnittstellen der Selmowelt abzufragen.  
+VAR_INPUT is used to connect the outputs of the zone, generate CMZs, create associated parameters and query interfaces of the Selmo world.  
 
 #### Zone InOut
 ```cpp
@@ -115,7 +115,7 @@ TimeoutComm: BOOL;
 ActValue: REFERENCE TO REAL;
 ```
 
-#### Schnittstelle
+#### Interface
 ```cpp
 ///sequence interface "read only"
 ///
@@ -125,7 +125,7 @@ stSeqIf: stSequenceInterface;
 ```
 
 ### VAR_OUTPUT
-VAR_OUTPUT wird verwendet, um die Eingänge der Zone zu verbinden.  
+VAR_OUTPUT is used to connect the inputs of the zone.  
 #### Zone InOut
 ```cpp
 ///	 			  
@@ -182,8 +182,8 @@ xInit: BOOL;
 
 ### Code
 
-#### Initialisierung
-Der Codeabschnitt `//initialize procedure` enthält, wie der Name schon sagt, Initialisierungswerte und ist ein fester Bestandteil jeder Selmo-Funktion.
+#### Initialization
+The code section `//initialize procedure` contains, as the name suggests, initialization values and is an integral part of every Selmo function.
 ```cpp
 //initialize procedure
 IF NOT xInit THEN 
@@ -193,8 +193,8 @@ IF NOT xInit THEN
 	xInit:=TRUE;
 END_IF
 ```
-#### Signaldeaktivierung 
-Der Codeabschnitt `//Signals deactivate on falling edge of the automatic release.` beinhaltet, wie der Name bereits impliziert, Signale, die zwingend deaktiviert bzw. aktiviert werden müssen und stellt einen festen Bestandteil jeder Selmo-Funktion dar.
+#### Signal deactivation
+As the name implies, the code section `//Signals deactivate on falling edge of the automatic release` contains signals that must be deactivated or activated and is an integral part of every Selmo function.
 ```cpp
 //Signals deactivate on falling edge of the automatic release.
 F_TRIGAuto(CLK:=stSeqIf.xSeqAutomaticReleased, Q=> );
@@ -209,7 +209,7 @@ ELSE
 	ControllerIsOff R= ControllerOn;  
 END_IF
 ```
-#### Funktion
+#### Function
 ```cpp
 ActValue := In_ActValue;
 
@@ -241,13 +241,13 @@ Out_Y_Int := REAL_TO_INT(Out_Y);
 ```
 
 <details>
-<summary> Deklarations Beispiel </summary>
+<summary> Declaration example </summary>
 	
 </details>
 
-## Übersicht der Attribute
-Insgesamt sind Attribute in der Programmierung grundlegend für die Organisation und Verarbeitung von Daten und Informationen in Programmen und Anwendungen.
-Bei Selmo werden folgende Attribute verwendet:
+## Overview of attributes
+Overall, attributes in programming are fundamental to the organization and processing of data and information in programs and applications.
+Selmo uses the following attributes:
 
 - [ANALOGPARAMETER](#analogparameter)
 - [ANALOGFUNCTION](#analogfunction)
@@ -293,10 +293,10 @@ Bei Selmo werden folgende Attribute verwendet:
 - [ZONETYPE](#zonetype)
 
 ### ANALOGPARAMETER
-Deklarationsbereich  
+Declaration area
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area 
 [Zone In](#zone-in) , [Zone InOut](#zone-inout) 
 
 Syntax  
@@ -304,122 +304,122 @@ Syntax
 [ANALOGFUNCTION(Equals)], [ANALOGFUNCTION(GreaterThan)], [ANALOGFUNCTION(LessThan)], [ANALOGFUNCTION(GreaterEquals)], [ANALOGFUNCTION(LessEquals)]
 ```
 
-Beschreibung  
-Die in eckigen Klammern angegebenen Ausdrücke, wie "Equals" (Gleich), "GreaterThan" (Größer als), "LessThan" (Kleiner als), "GreaterEquals" (Größer oder gleich) und "LessEquals" (Kleiner oder gleich), repräsentieren verschiedene Vergleichsoperationen oder Bedingungen, die in der "ANALOGFUNCTION" verwendet werden können.
-- Equals: Diese Funktion dient dazu, zu überprüfen, ob zwei analoge Werte gleich sind. Sie könnte beispielsweise verwendet werden, um festzustellen, ob ein bestimmtes analoges Signal einem anderen entspricht.
-- GreaterThan: Diese Funktion wird verwendet, um zu überprüfen, ob ein analoger Wert größer ist als ein anderer. Dies kann nützlich sein, um Bedingungen zu definieren, die erfüllt werden müssen, wenn ein Wert eine bestimmte Schwelle überschreitet.
-- LessThan: Im Gegensatz zur vorherigen Funktion überprüft diese, ob ein analoger Wert kleiner ist als ein anderer. Das kann in Situationen hilfreich sein, in denen die Größe eines Wertes von Bedeutung ist.
-- GreaterEquals: Diese Funktion dient dazu, festzustellen, ob ein Wert gleich oder größer als ein anderer ist. Das ist nützlich, wenn Sie eine Aktion auslösen möchten, wenn ein Wert einen bestimmten Schwellenwert erreicht oder überschreitet.
-- LessEquals: Hierbei wird überprüft, ob ein Wert kleiner oder gleich einem anderen ist. Dies kann in Szenarien verwendet werden, in denen Sie Aktionen basierend auf einer bestimmten Grenze auslösen möchten.
+Description 
+The expressions in square brackets, such as "Equals", "GreaterThan", "LessThan", "GreaterEquals" and "LessEquals", represent various comparison operations or conditions that can be used in the "ANALOGFUNCTION".
+- Equals: This function is used to check whether two analog values are the same. It could be used, for example, to determine whether a certain analog signal corresponds to another.
+- GreaterThan: This function is used to check whether one analog value is greater than another. This can be useful to define conditions that must be met if a value exceeds a certain threshold.
+- LessThan: In contrast to the previous function, this one checks whether one analog value is smaller than another. This can be helpful in situations where the size of a value is important.
+- GreaterEquals: This function is used to determine whether one value is equal to or greater than another. This is useful if you want to trigger an action when a value reaches or exceeds a certain threshold.
+- LessEquals: This checks whether one value is less than or equal to another. This can be used in scenarios where you want to trigger actions based on a specific limit.
 
 ### ANALOGFUNCTION
-Deklarationsbereich  
+Declaration area 
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax  
 ```cpp
 [ANALOGPARAMETER(ValueX1)]
 ```
-Beschreibung  
-Dies repräsentiert einen Parameter, der dazu verwendet wird, einen bestimmten Wert oder eine Variable zu identifizieren, die in einem Vergleich oder einer Operation verwendet werden soll.
+Description
+This represents a parameter that is used to identify a specific value or variable to be used in a comparison or operation.
 
 ### ANALOGVALUE
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax  
 ```cpp
 [ANALOGVALUE(100)]
 ```
-Beschreibung  
-Dies dient zur Festlegung eines konkreten analogen Werts in einem programmatischen Kontext.
+Description 
+This serves to define a concrete analog value in a programmatic context.
 
 ### AUTORESET
-Deklarationsbereich  
+Declaration area
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area 
 [CMZ](#cmz)
 
 Syntax  
 ```cpp
 [AUTORESET(false)], [AUTORESET(true)]
 ```
-Beschreibung  
-Ein Auto Reset im Fehlerfall bezeichnet eine Funktion, bei der ein Fehler automatisch zurückgesetzt wird, ohne dass manuell eingegriffen werden muss. Wenn ein Fehler auftritt, wird dieser automatisch erkannt und der Systemzustand wird auf den normalen Betriebszustand zurückgesetzt. Diese Funktion wird häufig in automatisierten Systemen verwendet, um sicherzustellen, dass der Betrieb fortgesetzt werden kann, ohne dass ein Bediener manuell eingreifen muss, um den Fehler zu beheben. Das Auto Reset im Fehlerfall ist besonders nützlich in kritischen Anwendungen, bei denen ein sofortiges Eingreifen notwendig ist, um Ausfallzeiten oder Schäden an der Ausrüstung zu minimieren. 
+Description  
+An auto reset in the event of an error refers to a function in which an error is automatically reset without the need for manual intervention. If an error occurs, it is automatically detected and the system status is reset to the normal operating status. This function is often used in automated systems to ensure that operation can continue without an operator having to intervene manually to rectify the fault. Auto reset in the event of a fault is particularly useful in critical applications where immediate intervention is required to minimize downtime or damage to equipment.
 
 ### BUTTONMODE 
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area
 [PARAMETER](#parameter)
 
 Syntax  
 ```cpp
 [BUTTONMODE(On)], [BUTTONMODE(Off)], [BUTTONMODE(Switch)], [BUTTONMODE(Toggle)]
 ```
-Beschreibung  
-Boolesche Parameter können als Buttons angelegt werden. Es stehen verschiedene Modi zur Verfügung:
+Description  
+Bool parameters can be created as buttons. Various modes are available:
 
-- On: Schaltet die Parametervariable auf "true" beim Betätigen des HMI-Buttons.
-- Off: Schaltet die Parametervariable auf "false" beim Betätigen des HMI-Buttons.
-- Switch: Schaltet die Parametervariable auf "true" beim Drücken und auf "false" beim Loslassen des HMI-Buttons.
-- Toggle: Wechselt bei jedem Tastendruck den Zustand der Parametervariable zwischen "true" und "false".
+- On: Switches the parameter variable to "true" when the HMI button is pressed.
+- Off: Switches the parameter variable to "false" when the HMI button is pressed.
+- Switch: Switches the parameter variable to "true" when the HMI button is pressed and to "false" when it is released.
+- Toggle: Changes the state of the parameter variable between "true" and "false" each time the button is pressed.
 
-Wenn der HMI-Button im grünen Zustand ist, entspricht dies dem Wert 'true' der Parametervariable. Wenn der Button im grauen Zustand ist, entspricht dies dem Wert 'false'.
+If the HMI button is in the green state, this corresponds to the value 'true' of the parameter variable. If the button is in the gray state, this corresponds to the value 'false'.
 
 ![HMI](images/HMIParameterButtonMode.png)
 
 ### CLONE2INVERTED
-Deklarationsbereich  
+Declaration area 
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
 ```cpp
 [CLONE2INVERTED(false)], [CLONE2INVERTED(true)]
 ```
-Beschreibung  
-Um ein Signal vollständig abzusichern kann eine invertierte Zone-In eingefügt werden. Die invertierte Zone überwacht den sicheren Übergang des mit der Zone verknüpften Signals von true auf false. Beispielsweise werden Taster, Sensoren etc. damit überwacht. Dadurch kann eine Fehlbedienung verhindert werden.  Mithilfe des Buttons Clone to inverted wird eine invertierte Zone der ausgewählten Zone-In eingefügt.
+Description  
+An inverted zone-in can be inserted to completely safeguard a signal. The inverted zone monitors the safe transition of the signal linked to the zone from true to false. For example, buttons, sensors etc. are monitored with it. This can prevent incorrect operation.  The Clone to inverted button is used to insert an inverted zone of the selected Zone-In.
 
 ![Studio](images/InvertierteZoneIn.png)
 
 ### CMZ
-Deklarationsbereich  
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [CMZ](#cmz)
 
 Syntax  
 ```cpp
 [CMZ(false)], [CMZ(true)]
 ```
-Beschreibung  
-Wird verwendet, um ein CMZ im CMZ-Bereich der Sequence anzulegen
+Description
+Is used to create a CMZ in the CMZ area of the sequence
 
 ### DECIMALDIGITS 
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area 
 [Parameter](#parameter)
 
 Syntax  
 ```cpp
 [DECIMALDIGITS(-1)]
 ```
-Beschreibung  
-DD (Decimal Digits) steht für die Anzahl der Dezimalstellen, die bei der Anzeige des Parameterwerts berücksichtigt werden sollen. Diese Anzahl wird üblicherweise im Parameter-Setup definiert und kann je nach Anwendung variieren. Wenn der Wert von DD auf 0 gesetzt wird, bedeutet dies, dass keine Nachkommastellen angezeigt werden sollen und der Wert als Ganzzahl dargestellt wird. Wenn DD auf -1 gesetzt wird, werden keine Nachkommastellen berücksichtigt, wenn DD auf 1 gesetzt wird, wird eine Dezimalstelle berücksichtigt und so weiter. Die Anzahl der Dezimalstellen ist wichtig, um eine korrekte und genaue Anzeige des Parameterwerts sicherzustellen. Wenn die Anzahl der Dezimalstellen nicht ausreichend ist, können wichtige Informationen verloren gehen oder ungenau dargestellt werden. Wenn die Anzahl der Dezimalstellen zu hoch ist, kann dies die Lesbarkeit des Wertes beeinträchtigen. Daher ist es wichtig, die Anzahl der Dezimalstellen sorgfältig zu definieren und zu überwachen, um eine genaue und lesbare Darstellung des Parameterwerts zu gewährleisten.
+Description  
+DD (Decimal Digits) stands for the number of decimal places to be taken into account when displaying the parameter value. This number is usually defined in the parameter setup and can vary depending on the application. If the value of DD is set to 0, this means that no decimal places are to be displayed and the value is displayed as an integer. If DD is set to -1, no decimal places are taken into account, if DD is set to 1, one decimal place is taken into account and so on. The number of decimal places is important to ensure that the parameter value is displayed correctly and accurately. If the number of decimal places is insufficient, important information may be lost or displayed inaccurately. If the number of decimal places is too high, this can impair the legibility of the value. It is therefore important to carefully define and monitor the number of decimal places to ensure an accurate and legible display of the parameter value.
 
 DD -1 (Input/Output)  
 ![HMI](images/HMIParameterDD_Default.png) ![HMI](images/HMIParameterDD_Default_Out.png)  
@@ -430,26 +430,26 @@ DD 1 (Input/Output)
 
 ### DECLARATIONASINPUT
 ### DECLARATIONASINPUT
-Deklarationsbereich  
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [CMZ](#cmz)
 
 Syntax  
 ```cpp
 [DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]
 ```
-Beschreibung  
-Wenn Sie die CMZ als `True` deklarieren, wird sie als Hardware-Eingang deklariert und mit dem `AT %I*` Attribut  in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.
+Description  
+If you declare the CMZ as `True`, it is declared as a hardware input and included in the programming logic with the `AT %I*` attribute. This means that the variable receives a signal or a value from a physical input of the system, such as a sensor or a switch.
 
 ![PLC](images/PLCCMZDeclerationAsHard.png)
 
 ### DISABLEAUTO
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Parameter](#parameter)
 
 Syntax
@@ -457,49 +457,49 @@ Syntax
 [DISABLEAUTO(false)], [DISABLEAUTO(true)], 
 ```
 
-Beschreibung  
-Die Funktion "Disable Input in Automatic" ermöglicht es, das Ändern von Eingabevariablen zu sperren, solange der Automatik-Modus aktiv ist. Dies bedeutet, dass Benutzer den Wert einer Eingabevariablen nicht manuell ändern können, solange das System im Automatik-Modus arbeitet. Diese Funktion ist besonders nützlich, um die Sicherheit und Integrität des Systems zu gewährleisten, da sie verhindert, dass Benutzer versehentlich den Betrieb des Systems beeinträchtigen, während es in einem automatisierten Betriebsmodus arbeitet. Wenn der Automatik-Modus deaktiviert ist, können Benutzer den Wert der Eingabevariablen wieder manuell ändern. Diese Funktion ist besonders hilfreich in industriellen Anwendungen, in denen es wichtig ist, dass das System sicher und zuverlässig funktioniert, auch wenn es von unterschiedlichen Benutzern betrieben wird.
+Description  
+The "Disable Input in Automatic" function makes it possible to disable the changing of input variables as long as automatic mode is active. This means that users cannot manually change the value of an input variable while the system is operating in automatic mode. This feature is particularly useful to ensure the security and integrity of the system as it prevents users from inadvertently interfering with the operation of the system while it is in an automated operating mode. When the automatic mode is disabled, users can manually change the value of the input variables again. This feature is particularly useful in industrial applications where it is important that the system operates safely and reliably, even when operated by different users.
 
 ### ERRORDELAY
-Deklarationsbereich  
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area
 [CMZ](#cmz)
 
 Syntax  
 ```cpp
 [DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]
 ```
-Beschreibung  
-Wenn Sie die CMZ als `True` deklarieren, wird sie als Hardware-Eingang deklariert und mit dem `AT %I*` Attribut  in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.
+Description
+If you declare the CMZ as `True`, it is declared as a hardware input and included in the programming logic with the `AT %I*` attribute. This means that the variable receives a signal or a value from a physical input of the system, such as a sensor or a switch.
 
 ### GHOSTMODE
 
 ### GHOSTMODEDELAY
 
 ### HARDWAREINPUT
-Deklarationsbereich  
+Declaration area 
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
 ```cpp
 [DECLARATIONASINPUT(false)], [DECLARATIONASINPUT(true)]
 ```
-Beschreibung  
-Wenn Sie den Input als `true` deklarieren, wird sie als Hardware-Eingang deklariert und mit dem `AT %I*` Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert von einem physikalischen Eingang des Systems empfängt, wie beispielsweise von einem Sensor oder einem Schalter.
+Description  
+If you declare the input as `true`, it is declared as a hardware input and included in the programming logic with the `AT %I*` attribute. This means that the variable receives a signal or value from a physical input of the system, such as a sensor or a switch.
 
 ![Studio](images/StudioInputDeclarationAsHInputProperty.png)  
 ![PLC](images/PLCInputDeclarationAsHInputProperty.png)
 
 ### HARDWAREOUTPUT
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -507,17 +507,17 @@ Syntax
 [HARDWAREOUTPUT(false)], [HARDWAREOUTPUT(true)] 
 ```
 
-Beschreibung  
-Wenn Sie den Output als `true` deklarieren, wird er als Hardware-Ausgang deklariert und mit dem `AT %Q*` Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert auf einem physikalischen Ausgang des Systems sendet, wie beispielsweise von einem Ventil oder einem Umrichter.
+Description 
+If you declare the output as `true`, it is declared as a hardware output and included in the programming logic with the `AT %Q*` attribute. This means that the variable sends a signal or a value to a physical output of the system, such as from a valve or an inverter.
 
 ![Studio](images/StudioOutputDeclerationAsHardProperty.png)  
 ![PLC](images/PLCOutputDeclerationAsHOutput.png)
 
 ### HMIBUTTON
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -525,18 +525,17 @@ Syntax
 [HMIBUTTON(false)], [HMIBUTTON(true)]
 ```
 
-Beschreibung  
-Der HMI-Button ist eine Benutzerschnittstelle, die nur in der Betriebsart Handbetrieb funktioniert und verwendet wird, um den Ausgang zu steuern. Im Gegensatz zur automatischen Betriebsart, bei der das System automatisch arbeitet, gibt der Handbetrieb dem Benutzer die Möglichkeit, manuelle Eingriffe vorzunehmen.
-Der HMI-Button wird betätigt, um den Ausgang zu steuern, bis ein Feedback-Signal (Input der Zone) aktiv wird. Das Feedback-Signal gibt dem System eine Rückmeldung darüber, ob der gewünschte Zustand erreicht wurde oder ob Änderungen vorgenommen werden müssen. Wenn die MXIC-Kreuzverriegelung aktiv ist, kann der Ausgang nicht gesteuert werden und die HMI zeigt Informationen zur Zone an, mit der die Verriegelung stattfindet.
-Die MXIC-Kreuzverriegelung ist eine Sicherheitsfunktion, die verhindert, dass die Zone nur unter bestimmten Voraussetzungen (Zonen x y befinden sich in einem definierten Zustand) aktiviert werden darf. Dies ist insbesondere bei kritischen Anwendungen wichtig, bei denen das gleichzeitige Auftreten von mehreren Ereignissen zu gefährlichen Situationen führen kann. Durch die Verwendung des HMI-Buttons in Kombination mit der MXIC-Kreuzverriegelung wird sichergestellt, dass nur der gewünschte Ausgang aktiviert wird und dass potenzielle Gefahren vermieden werden.
+Description
+The HMI button is a user interface that only functions in manual mode and is used to control the output. In contrast to automatic mode, in which the system operates automatically, manual mode allows the user to make manual interventions. The HMI button is pressed to control the output until a feedback signal (zone input) becomes active. The feedback signal provides the system with feedback as to whether the desired state has been reached or whether changes need to be made. If MXIC cross-locking is active, the output cannot be controlled and the HMI displays information about the zone with which the locking is taking place.
+MXIC cross-locking is a safety function that prevents the zone from being activated only under certain conditions (zones x y are in a defined state). This is particularly important in critical applications where the simultaneous occurrence of several events can lead to dangerous situations. Using the HMI button in combination with the MXIC cross interlock ensures that only the desired output is activated and that potential hazards are avoided.
 
 ![HMI](images/HMIButton.png)
 
 ### HMIBUTTONTEXT
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area 
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -544,16 +543,16 @@ Syntax
 [HMIBUTTONTEXT(Button Zone 9)]
 ```
 
-Beschreibung  
-Der HMI Button Text ist der Bezeichner des Handbetrieb-Buttons der Zone und gibt eine klare Funktionsbezeichnung der Zone wieder, um dem Benutzer eine intuitive Bedienung zu ermöglichen.
+Description  
+The HMI button text is the identifier of the manual mode button of the zone and provides a clear function description of the zone to enable intuitive operation for the user.
 
 ![HMI](images/HMIButtonText.png)
 
 ### HMIDISPLAYTEXT
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Output](#zone-output), [Parameter](#parameter), [CMZ](#cmz)
 
 Syntax
@@ -561,77 +560,76 @@ Syntax
 [HMIDISPLAYTEXT(Zone 7 On)]
 ```
 
-Beschreibung  
-Wird hier ein Text eingetragen wirkt der Text nur in der HMI und wird als Anzeige Text übernommen. Die Eigenschaft Name wird in der HMI überschrieben.
-
+Description  
+If a text is entered here, the text only takes effect in the HMI and is adopted as the display text. The Name property is overwritten in the HMI.
 ![Studio](images/StudioHmiDisplayText.png)  
 ![HMI](images/HmiDisplayText.png)  
 
 ### INPUTDELAY
-Deklarationsbereich  
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
 ```cpp
 [INPUTDELAY(1000)]
 ```
-Beschreibung  
-Bitte geben Sie an, um wie viele Millisekunden das Eingangssignal verzögert werden soll. Die Verzögerung bezieht sich auf den Zeitunterschied zwischen dem Zeitpunkt, zu dem das Signal empfangen wird, und dem Zeitpunkt, zu dem es im System verarbeitet wird. Eine Verzögerung kann beabsichtigt sein, um das Signal auf eine bestimmte Weise zu modifizieren oder um sicherzustellen, dass es synchron mit anderen Signalen verarbeitet wird. Die genaue Zeitdauer, um die das Signal verzögert werden soll, hängt von den Anforderungen des Systems und der Art des Signals ab, das verarbeitet wird.
+Description
+Please specify by how many milliseconds the input signal should be delayed. The delay refers to the time difference between when the signal is received and when it is processed in the system. A delay may be intended to modify the signal in a particular way or to ensure that it is processed in synchronization with other signals. The exact amount of time by which the signal should be delayed depends on the requirements of the system and the type of signal being processed.
 
 ### INPUTDESCRIPTION
-Deklarationsbereich  
+Declaration area
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
 ```cpp
 [INPUTDESCRIPTION(Input Text)]
 ```
-Beschreibung  
-In der Programmierung von PLCs ist es wichtig, dass jede Eingangsvariable im Code eine aussagekräftige Beschreibung erhält. Eine solche Beschreibung hilft anderen Programmierern oder Wartungspersonal, den Code leichter zu verstehen und zu bearbeiten. Die Beschreibung der Eingangsvariable sollte idealerweise den Zweck und die Funktionsweise der Variable beschreiben.
-Durch eine klare und präzise Beschreibung der Eingangsvariable kann auch sichergestellt werden, dass sie richtig konfiguriert und kalibriert ist, bevor sie in das PLC-Programm integriert wird. Außerdem hilft sie bei der Fehlersuche und Fehlerbehebung im Code, indem sie es dem Programmierer ermöglicht, schnell festzustellen, welche Eingangsvariablen betroffen sind. Die Beschreibung der Eingangsvariable sollte daher als wichtiger Bestandteil der Dokumentation des PLC-Programms angesehen werden, um die Effizienz, Wartbarkeit und Fehlerfreiheit des Codes zu erhöhen.
+Description  
+When programming PLCs, it is important that each input variable in the code is given a meaningful description. Such a description helps other programmers or maintenance personnel to understand and edit the code more easily. Ideally, the description of the input variable should describe the purpose and function of the variable.
+A clear and precise description of the input variable can also ensure that it is correctly configured and calibrated before it is integrated into the PLC program. It also helps with debugging and troubleshooting the code by allowing the programmer to quickly determine which input variables are affected. The description of the input variable should therefore be considered an important part of the PLC program documentation in order to increase the efficiency, maintainability and accuracy of the code.
 
 ![Studio](images/StudioInputDescriptionPorperty.png)  
 ![HMI](images/PLC_GVL_Sequence_IOs_InputDescription.png)
 
 ### INPUTINVERTED
-Deklarationsbereich  
+Declaration area 
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area 
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
 ```cpp
 [INPUTINVERTED(false)], [INPUTINVERTED(true)]
 ```
-Beschreibung  
-Bitte legen Sie fest, ob das Eingangssignal invertiert ist oder nicht. Das bedeutet, dass Sie entscheiden müssen, ob das Signal, das in ein bestimmtes System eingeht, in seiner Polarität umgekehrt ist oder nicht. Eine invertierte Signalpolarität bedeutet, dass das Signal in Bezug auf seine positive und negative Polarität umgekehrt ist. Es ist wichtig, diese Entscheidung zu treffen, da sie Auswirkungen auf die Art und Weise hat, wie das Signal im System verarbeitet wird.
+Description
+Please specify whether the input signal is inverted or not. This means that you must decide whether the polarity of the signal entering a particular system is inverted or not. An inverted signal polarity means that the signal is reversed in terms of its positive and negative polarity. It is important to make this decision as it will affect the way the signal is processed in the system.
 
 ### INPUTMODE
-Deklarationsbereich  
+Declaration area 
 [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
 ```cpp
 [INPUTMODE(digital)], [INPUTMODE(analogvalue)], [INPUTMODE(analogparameter)], [INPUTMODE(parameterlist)]
 ```
-Beschreibung
-Die Art des Signals wird durch den Modus des Eingangs bestimmt. Dabei kann es sich entweder um ein digitales oder analoges Signal oder um einen Parameter handeln. Der Modus des Eingangs gibt somit an, welche Art von Signal erwartet wird und wie dieses Signal interpretiert werden soll. Wenn der Eingangsmodus beispielsweise auf "digital" eingestellt ist, erwartet das System ein Signal, das aus diskreten Werten besteht, während bei einem analogen Eingangsmodus ein kontinuierliches Signal erwartet wird. Bei einem Parametermodus hingegen wird ein Wert erwartet, der einen bestimmten Parameter repräsentiert. Insgesamt hängt die Art des Signals, das ein System empfängt und verarbeitet, somit maßgeblich vom eingestellten Eingangsmodus ab.
+Description
+The type of signal is determined by the mode of the input. This can be either a digital or analog signal or a parameter. The input mode therefore specifies what type of signal is expected and how this signal should be interpreted. For example, if the input mode is set to "digital", the system expects a signal that consists of discrete values, while a continuous signal is expected with an analog input mode. A parameter mode, on the other hand, expects a value that represents a specific parameter. Overall, the type of signal that a system receives and processes therefore depends largely on the input mode set.
 
 ### INVERTED
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [CMZ](#cmz)
 
 Syntax
@@ -639,32 +637,31 @@ Syntax
 [HMIDISPLAYTEXT(Zone 7 On)]
 ```
 
-Beschreibung  
-Wenn das Feld "Inverted" aktiviert wird, wird der Wert der verknüpften Variable im PLC-Code der entsprechenden Ebene invertiert.
-Dies ist nur mit booleschen Variablen Typen möglich
+Description  
+If the "Inverted" field is activated, the value of the linked variable is inverted in the PLC code of the corresponding level. This is only possible with Bool variable types
 
 ![PLC](images/PLCCMZDeclerationAsHardPrg.png)
 
 ### ISREFERENCEGROUP
-Deklarationsbereich  
+Declaration area
 [VAR_IN_OUT](#var_inout)
 
-Objektbereich  
-nicht zutreffend
+Object area
+not applicable
 
 Syntax  
 ```cpp
 [ISREFERENCEGROUP(FALSE)]
 [ISREFERENCEGROUP(TRUE)]
 ```
-Beschreibung  
-Dies deklariert eine InOut-Variable als Referenzgruppe die mit anderen Funktionen die gleiche Referent teilt. Ein Beispiel sind mehrere Motion-Funktionen welche die gleiche Achse (AXIS_REF) ansprechen.
+Description
+This declares an InOut variable as a reference group that shares the same referent with other functions. An example is several motion functions that address the same axis (AXIS_REF).
 
 ### KEEPOUTPUTALIVE
-Deklarationsbereich  
+Declaration area 
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area 
 [Zone InOut](#zone-inout)
 
 Syntax
@@ -672,18 +669,18 @@ Syntax
 [KEEPOUTPUTALIVE(false)], [KEEPOUTPUTALIVE(true)]
 ```
 
-Beschreibung  
-Die Ansteuerung des Ausgangs bietet zwei unterschiedliche Herangehensweisen, die durch die Eigenschaft "Keep Alive" bestimmt werden:
-- Wenn die Eigenschaft "Keep Alive" auf den Wert "False" gesetzt ist, erfolgt die Standardansteuerung. In diesem Fall wird der Ausgang automatisch deaktiviert, sobald das Feedback(Input) erreicht wurde.
-- Wenn hingegen die Eigenschaft "Keep Alive" auf den Wert "True" gesetzt wird, wird der Ausgang unabhängig vom Feedback gesteuert. Das bedeutet, dass die Ansteuerung des Ausgangs nicht von der Rückmeldung abhängt und dieser aktiv bleibt, ungeachtet des Feedbacks.
-
+Description  
+The control of the output offers two different approaches, which are determined by the "Keep Alive" property:
+- If the "Keep Alive" property is set to the value "False", the standard control takes place. In this case, the output is automatically deactivated as soon as the feedback (input) is reached.
+- If, however, the "Keep Alive" property is set to "True", the output is controlled independently of the feedback. This means that the control of the output does not depend on the feedback and it remains active regardless of the feedback.
+  
 ![Studio](images/StudioOutputKeepAlive.png)
 
 ### LIMITMAX
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Parameter](#parameter)
 
 Syntax
@@ -691,16 +688,16 @@ Syntax
 [LIMITMAX(100)]
 ```
 
-Beschreibung  
-Der maximale Eingabewert für einen Parameter ist der höchste Wert, der für diesen Parameter akzeptabel ist. Wenn ein Wert für einen Parameter eingegeben wird, der über dem definierten oberen Grenzwert (LH) liegt, wird dieser Grenzwert in der Regel rot markiert, um anzuzeigen, dass die Eingabe nicht akzeptiert wird. Ähnlich wie bei einem zu niedrigen Eingabewert, verweigert das System die Eingabe des Wertes, um zu verhindern, dass das System fehlerhaft oder instabil wird. Der obere Grenzwert ist wichtig, um sicherzustellen, dass die Maschine oder das System innerhalb sicherer und effizienter Betriebsparameter arbeitet. Eine korrekte Eingabe des Parameters ist wichtig, um die Leistung und Sicherheit des Systems zu gewährleisten. Daher sollte der obere Grenzwert sorgfältig dokumentiert und eingehalten werden, um zu verhindern, dass das System fehlerhaft oder instabil wird.
+Description  
+The maximum input value for a parameter is the highest value that is acceptable for this parameter. If a value is entered for a parameter that is above the defined upper limit value (LH), this limit value is usually highlighted in red to indicate that the input is not accepted. Similarly, if the input value is too low, the system will refuse to accept the value to prevent the system from becoming faulty or unstable. The upper limit value is important to ensure that the machine or system operates within safe and efficient operating parameters. Correct entry of the parameter is important to ensure the performance and safety of the system. Therefore, the upper limit should be carefully documented and adhered to in order to prevent the system from becoming faulty or unstable.
 
 ![HMI](images/HMIParameterLH.png)
 
 ### LIMITMIN 
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Parameter](#parameter)
 
 Syntax
@@ -708,16 +705,16 @@ Syntax
 [LIMITMIN(0)]
 ```
 
-Beschreibung  
-Der minimale Eingabewert für einen Input-Parameter ist der kleinste Wert, der für diesen Parameter akzeptabel ist. Dieser Wert kann je nach PLC-Datentyp variieren, und es sind nur bestimmte Eingabeformate zulässig, die mit dem Datentyp des Parameters übereinstimmen. Es ist wichtig sicherzustellen, dass der minimale Eingabewert im richtigen Format eingegeben wird, da ansonsten Fehlfunktionen oder Fehler im Programm auftreten können. Eine fehlerhafte Eingabe kann beispielsweise zu einer Überlastung des Systems oder einer unerwarteten Reaktion führen. Daher sollte der minimale Eingabewert sorgfältig dokumentiert und eingegeben werden, um die korrekte Funktionsweise des Systems oder der Maschine zu gewährleisten. Wenn ein Wert für einen Parameter eingegeben wird, der unter dem definierten unteren Grenzwert (LL) liegt, wird dieser Grenzwert in der Regel rot markiert, um anzuzeigen, dass die Eingabe nicht akzeptiert wird. Das System oder die Maschine verweigert die Eingabe des Wertes, um zu verhindern, dass das System fehlerhaft oder instabil wird. Die rote Markierung soll dem Benutzer auf den Fehler hinweisen und ihm helfen, den Eingabewert entsprechend zu korrigieren.
+Description
+The minimum input value for an input parameter is the smallest value that is acceptable for this parameter. This value can vary depending on the PLC data type and only certain input formats are allowed that match the data type of the parameter. It is important to ensure that the minimum input value is entered in the correct format, otherwise malfunctions or errors may occur in the program. An incorrect input can, for example, lead to an overload of the system or an unexpected reaction. Therefore, the minimum input value should be carefully documented and entered to ensure the correct functioning of the system or machine. If a value is entered for a parameter that is below the defined lower limit value (LL), this limit value is usually highlighted in red to indicate that the input is not accepted. The system or machine refuses to accept the input of the value to prevent the system from becoming faulty or unstable. The red marking is intended to alert the user to the error and help them to correct the input value accordingly.
 
 ![HMI](images/HMIParameterLL.png)
 
 ### OUTPUTDESCRIPTION
-Deklarationsbereich  
+Declaration area 
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -725,18 +722,18 @@ Syntax
 [OUTPUTDESCRIPTION(Output Text)]
 ```
 
-Beschreibung  
-In der Programmierung von PLCs ist es wichtig, dass jede Ausgangsvariable im Code eine aussagekräftige Beschreibung erhält. Eine solche Beschreibung hilft anderen Programmierern oder Wartungspersonal, den Code leichter zu verstehen und zu bearbeiten. Die Beschreibung der Ausgangsvariable sollte idealerweise den Zweck und die Funktionsweise der Variable beschreiben.
-Durch eine klare und präzise Beschreibung der Ausgangsvariable kann auch sichergestellt werden, dass sie richtig konfiguriert und kalibriert ist, bevor sie in das PLC-Programm integriert wird. Außerdem hilft sie bei der Fehlersuche und Fehlerbehebung im Code, indem sie es dem Programmierer ermöglicht, schnell festzustellen, welche Ausgangsvariablen betroffen sind. Die Beschreibung der Ausgangsvariable sollte daher als wichtiger Bestandteil der Dokumentation des PLC-Programms angesehen werden, um die Effizienz, Wartbarkeit und Fehlerfreiheit des Codes zu erhöhen.
+Description 
+When programming PLCs, it is important that each output variable in the code is given a meaningful description. Such a description helps other programmers or maintenance personnel to understand and edit the code more easily. Ideally, the description of the output variable should describe the purpose and function of the variable.
+A clear and precise description of the output variable can also ensure that it is correctly configured and calibrated before it is integrated into the PLC program. It also helps with debugging and troubleshooting the code by allowing the programmer to quickly determine which output variables are affected. The description of the output variable should therefore be considered an important part of the PLC program documentation in order to increase the efficiency, maintainability and accuracy of the code.
 
 ![Studio](images/StudioOutputProperty.png)
 ![PLC](images/PLCOutputDescription.png)
 
 ### OUTPUTGROUP
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -744,17 +741,17 @@ Syntax
 [OUTPUTGROUP(Conveyor)]
 ```
 
-Beschreibung  
-Die Output-Group-Funktion ermöglicht die Verbindung von mehreren Zonen desselben Typs. Hierbei wird nur ein gemeinsamer Ausgang für alle Zonen innerhalb der Gruppe genutzt. Das bedeutet, dass wenn Sie mehrere Zonen in einer Gruppe zusammenfassen, alle diese Zonen steuern einen Ausgang. 
+Description  
+The output group function makes it possible to connect several zones of the same type. Only one common output is used for all zones within the group. This means that if you combine several zones in a group, all these zones control one output.
 
 ![Studio](images/StudioOutputGroupNext.png)
 ![PLC](images/PLCOutputDescription.png)
 
 ### OUTPUTMODE
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area 
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -762,16 +759,16 @@ Syntax
 [OUTPUTMODE(digital)], [OUTPUTMODE(analogvalue)], [OUTPUTMODE(analogparameter)], [OUTPUTMODE(parameterlist)]
 ```
 
-Beschreibung  
-Die Art des Signals wird durch den Modus des Ausgangs bestimmt. Dabei kann es sich entweder um ein digitales oder analoges Signal oder um einen Parameter handeln. Der Modus des Ausgangs gibt somit an, welche Art von Signal erwartet wird und wie dieses Signal interpretiert werden soll. Wenn der Ausgangsmodus beispielsweise auf "digital" eingestellt ist, sendet das System ein Signal, das aus einem diskreten Werte besteht, während bei einem analogen Ausgangsmodus ein kontinuierliches Signal gesendet wird. Bei einem Parametermodus hingegen wird ein Wert gesendet, der einen bestimmten Parameter repräsentiert. Insgesamt hängt die Art des Signals, welches ein System empfängt und verarbeitet, maßgeblich vom eingestellten Ausgangsmodus ab. 
+Description  
+The type of signal is determined by the mode of the output. This can be either a digital or analog signal or a parameter. The output mode therefore specifies what type of signal is expected and how this signal should be interpreted. For example, if the output mode is set to "digital", the system will send a signal consisting of a discrete value, whereas an analog output mode will send a continuous signal. A parameter mode, on the other hand, sends a value that represents a specific parameter. Overall, the type of signal that a system receives and processes depends largely on the set output mode.
 
 ![Studio](images/StudioOutputMode.png)
 
 ### PAIRCHECK
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area 
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax
@@ -779,14 +776,14 @@ Syntax
 [PAIRCHECK(false)], [PAIRCHECK(true)]
 ```
 
-Beschreibung  
-Wenn PairCheck aktiv ist, wird die Zone mit anderen Zonen überprüft, um sicherzustellen, dass bestimmte Bedingungen erfüllt sind, wie beispielsweise das Vorhandensein von Signal 1 und Signal 2, die nicht zeitgleich auftreten dürfen.
+Description  
+If PairCheck is active, the zone is checked with other zones to ensure that certain conditions are met, such as the presence of signal 1 and signal 2, which must not occur at the same time.
 
 ### PAIRCHECKGROUP
-Deklarationsbereich  
+Declaration area 
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area 
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax
@@ -794,14 +791,14 @@ Syntax
 [PAIRCHECKGROUP(1)]
 ```
 
-Beschreibung  
-Die PairCheckGroup-Nummer wird verwendet, um festzulegen, ob eine Zone-In einer Prüfung mit anderen Zonen derselben Gruppe zusammengefasst werden soll. Diese Gruppierung ermöglicht es, bestimmte Prüfungen auf mehrere Zonen anzuwenden, die dieselbe PairCheckGroup-Nummer aufweisen, um sicherzustellen, dass die Ergebnisse konsistent sind. 
+Description  
+The PairCheckGroup number is used to determine whether a zone-in of a check should be grouped with other zones of the same group. This grouping makes it possible to apply certain checks to multiple zones that have the same PairCheckGroup number to ensure that the results are consistent.
 
 ### PARAMETER
-Deklarationsbereich  
+Declaration area 
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area  
 [Parameter](#parameter)
 
 Syntax
@@ -809,14 +806,14 @@ Syntax
 [PARAMETER(false)], [PARAMETER(true)]
 ```
 
-Beschreibung  
-Wird verwendet, um einen Parameter im Parameter Layer der Sequence anzulegen.
+Description  
+Is used to create a parameter in the parameter layer of the sequence.
 
 ### PERSISTENT
-Deklarationsbereich  
+Declaration area  
 [VAR_IN_OUT](#var_in_out)
 
-Objektbereich  
+Object area 
 [GVL_<Sequence1>_Driver](#GVL_Sequence1_Driver)
 
 Syntax
@@ -824,14 +821,14 @@ Syntax
 [PERSISTENT(false)], [PERSISTENT(true)]
 ```
 
-Beschreibung  
-Wird verwendet, um eine Variable in der GVL_<Sequence1>_Driver Persistent zu deklarieren.
+Description 
+Is used to declare a variable in the GVL_<Sequence1>_Driver Persistent.
 
 ### RELATED_PARAMETERS
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out), [Parameter](#parameter)
 
 Syntax
@@ -839,14 +836,14 @@ Syntax
 [RELATED_PARAMETERS(ValueY1,ValueY2,ValueY3)]
 ```
 
-Beschreibung  
-Wenn es erforderlich ist, mehrere Parameter gleichzeitig einzufügen, können Sie mithilfe dieses Attributs auswählen, welche Parameter in die Einfügung einbezogen werden sollen. Dies setzt voraus, dass der jeweilige Parameter in der Deklaration vorhanden ist.
+Description  
+If it is necessary to insert several parameters at the same time, you can use this attribute to select which parameters are to be included in the insertion. This assumes that the respective parameter is present in the declaration.
 
 ### SECTION
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Parameter](#parameter), [CMZ](#cmz)
 
 Syntax
@@ -854,16 +851,16 @@ Syntax
 [SECTION(Setup 1)]
 ```
 
-Beschreibung  
-Die Eigenschaft "Section" kann verwendet werden, um Parameter zu gruppieren und sie in einem gemeinsamen Menüpunkt in der HMI darzustellen. Wenn Parameter mit der gleichen Section-Eigenschaft markiert sind, werden sie automatisch in der gleichen Gruppe zusammengefasst. Durch das Gruppieren von Parametern in Sektionen wird das Menü übersichtlicher und benutzerfreundlicher gestaltet, da verwandte Parameter zusammengefasst werden und der Benutzer sie leichter finden und ändern kann. Die Section-Eigenschaft kann beliebig benannt werden, um die Gruppe von Parametern entsprechend zu beschreiben. Ein Beispiel für eine sinnvolle Benennung einer Section-Eigenschaft ist "Kommunikationseinstellungen" für Parameter, die sich auf die Kommunikation des Systems beziehen. Durch die Verwendung von Sections kann die Handhabung von Parametern einfacher und effizienter gestaltet werden, was insgesamt zu einer verbesserten Benutzererfahrung führt.
+Description  
+The "Section" property can be used to group parameters and display them in a common menu item in the HMI. If parameters with the same Section property are selected, they are automatically combined in the same group. Grouping parameters into sections makes the menu clearer and more user-friendly, as related parameters are grouped together and the user can find and change them more easily. The section property can be given any name to describe the group of parameters accordingly. An example of a useful name for a section property is "Communication settings" for parameters that relate to the communication of the system. By using sections, the handling of parameters can be made easier and more efficient, which leads to an improved overall user experience.
 
 ![HMI](images/HMIParameterSection.png)
 
 ### TYPE
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area
 [Parameter](#parameter)
 
 Syntax
@@ -871,14 +868,14 @@ Syntax
 [TYPE(output)], [TYPE(input)]
 ```
 
-Beschreibung  
-Legt fest, um welche Art von Parameter es sich handelt.
-
+Description  
+Determines what type of parameter it is.
 ### UNIT 
-Deklarationsbereich  
+
+Declaration area 
 [VAR_INPUT](#var_input)
 
-Objektbereich  
+Object area 
 [Parameter](#parameter)
 
 Syntax
@@ -886,16 +883,16 @@ Syntax
 [UNIT(%)]
 ```
 
-Beschreibung  
-Die Anzeige-Einheit des Parameters in der HMI bezieht sich auf die Einheit, in der der Parameter auf dem HMI-Display des Systems oder der Maschine angezeigt wird. Die Einheit kann je nach PLC-Datentyp variieren, jedoch sind alle Einträge gültig und werden nicht auf ihre Richtigkeit oder Konsistenz mit anderen Parametern oder dem System überprüft. Es ist jedoch wichtig, dass die Einheit für den Benutzer verständlich ist und ihm dabei hilft, den Parameter richtig zu interpretieren. Eine korrekte und eindeutige Anzeige-Einheit kann dazu beitragen, Missverständnisse zu vermeiden und die Bedienung des Systems zu erleichtern. Daher sollte die Anzeige-Einheit des Parameters sorgfältig gewählt und richtig dokumentiert werden, um ein korrektes Verständnis und eine fehlerfreie Verwendung des Systems oder der Maschine zu gewährleisten.
+Description 
+The display unit of the parameter in the HMI refers to the unit in which the parameter is displayed on the HMI display of the system or machine. The unit may vary depending on the PLC data type, but all entries are valid and are not checked for accuracy or consistency with other parameters or the system. However, it is important that the unit is understandable to the user and helps them to interpret the parameter correctly. A correct and clear display unit can help to avoid misunderstandings and facilitate the operation of the system. Therefore, the display unit of the parameter should be carefully selected and properly documented to ensure correct understanding and error-free use of the system or machine.
 
 ![HMI](images/HMIParameterUnit.png)
 
 ### ZONEGROUPNAME
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area 
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax
@@ -903,16 +900,16 @@ Syntax
 [ZONEGROUPNAME(Group A)]
 ```
 
-Beschreibung  
-Mit der Eigenschaft ZONEGROUPNAME können Zonen zu einer Gruppe zusammengefasst werden. Es dient außerdem als Filtername für die Filterfunktion.
+Description  
+The ZONEGROUPNAME property can be used to combine zones into a group. It also serves as a filter name for the filter function.
 
 ![HMI](images/StudioGroupName.png)
 
 ### ZONENAME
-Deklarationsbereich  
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax
@@ -920,14 +917,14 @@ Syntax
 [ZONEGROUPNAME(Group A)]
 ```
 
-Beschreibung  
-Zonennamen können explizit benannt werden, indem die Eigenschaft ZONENAME verwendet wird.
+Description
+Zone names can be explicitly named by using the ZONENAME property.
 
 ### ZONETYPE
-Deklarationsbereich  
+Declaration area
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Objektbereich  
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax
@@ -935,6 +932,6 @@ Syntax
 [ZONETYPE(In)], [ZONETYPE(InOut)], ZONETYPE(Out)]
 ```
 
-Beschreibung  
-Wird verwendet, um eine Zone im System Layer der Sequence anzulegen.
+Description 
+Is used to create a zone in the system layer of the sequence.
 
