@@ -313,7 +313,7 @@ The expressions in square brackets, such as "Equals", "GreaterThan", "LessThan",
 - LessEquals: This checks whether one value is less than or equal to another. This can be used in scenarios where you want to trigger actions based on a specific limit.
 
 ### ANALOGFUNCTION
-Declaration area 
+Declaration area   
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
 Object area      
@@ -327,10 +327,10 @@ Description
 This represents a parameter that is used to identify a specific value or variable to be used in a comparison or operation.
 
 ### ANALOGVALUE
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area    
+Object area      
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax  
