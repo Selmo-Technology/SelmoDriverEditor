@@ -429,7 +429,6 @@ DD 1 (Input/Output)
 ![HMI](images/HMIParameterDD_One.png) ![HMI](images/HMIParameterDD_One_Out.png)  
 
 ### DECLARATIONASINPUT
-### DECLARATIONASINPUT
 Declaration area    
 [VAR_OUTPUT](#var_output)
 
