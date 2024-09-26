@@ -293,10 +293,10 @@ Selmo uses the following attributes:
 - [ZONETYPE](#zonetype)
 
 ### ANALOGPARAMETER
-Declaration area
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Object area 
+Object area   
 [Zone In](#zone-in) , [Zone InOut](#zone-inout) 
 
 Syntax  
@@ -316,21 +316,21 @@ The expressions in square brackets, such as "Equals", "GreaterThan", "LessThan",
 Declaration area 
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area      
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax  
 ```cpp
 [ANALOGPARAMETER(ValueX1)]
 ```
-Description
+Description  
 This represents a parameter that is used to identify a specific value or variable to be used in a comparison or operation.
 
 ### ANALOGVALUE
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax  
@@ -341,10 +341,10 @@ Description
 This serves to define a concrete analog value in a programmatic context.
 
 ### AUTORESET
-Declaration area
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Object area 
+Object area   
 [CMZ](#cmz)
 
 Syntax  
@@ -355,10 +355,10 @@ Description
 An auto reset in the event of an error refers to a function in which an error is automatically reset without the need for manual intervention. If an error occurs, it is automatically detected and the system status is reset to the normal operating status. This function is often used in automated systems to ensure that operation can continue without an operator having to intervene manually to rectify the fault. Auto reset in the event of a fault is particularly useful in critical applications where immediate intervention is required to minimize downtime or damage to equipment.
 
 ### BUTTONMODE 
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area
+Object area  
 [PARAMETER](#parameter)
 
 Syntax  
@@ -378,10 +378,10 @@ If the HMI button is in the green state, this corresponds to the value 'true' of
 ![HMI](images/HMIParameterButtonMode.png)
 
 ### CLONE2INVERTED
-Declaration area 
+Declaration area   
 [VAR_OUTPUT](#var_output)
 
-Object area
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
@@ -394,10 +394,10 @@ An inverted zone-in can be inserted to completely safeguard a signal. The invert
 ![Studio](images/InvertierteZoneIn.png)
 
 ### CMZ
-Declaration area  
+Declaration area    
 [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [CMZ](#cmz)
 
 Syntax  
@@ -408,10 +408,10 @@ Description
 Is used to create a CMZ in the CMZ area of the sequence
 
 ### DECIMALDIGITS 
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area 
+Object area     
 [Parameter](#parameter)
 
 Syntax  
@@ -430,10 +430,10 @@ DD 1 (Input/Output)
 
 ### DECLARATIONASINPUT
 ### DECLARATIONASINPUT
-Declaration area  
+Declaration area    
 [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [CMZ](#cmz)
 
 Syntax  
@@ -446,10 +446,10 @@ If you declare the CMZ as `True`, it is declared as a hardware input and include
 ![PLC](images/PLCCMZDeclerationAsHard.png)
 
 ### DISABLEAUTO
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [Parameter](#parameter)
 
 Syntax
@@ -461,10 +461,10 @@ Description
 The "Disable Input in Automatic" function makes it possible to disable the changing of input variables as long as automatic mode is active. This means that users cannot manually change the value of an input variable while the system is operating in automatic mode. This feature is particularly useful to ensure the security and integrity of the system as it prevents users from inadvertently interfering with the operation of the system while it is in an automated operating mode. When the automatic mode is disabled, users can manually change the value of the input variables again. This feature is particularly useful in industrial applications where it is important that the system operates safely and reliably, even when operated by different users.
 
 ### ERRORDELAY
-Declaration area  
+Declaration area    
 [VAR_OUTPUT](#var_output)
 
-Object area
+Object area  
 [CMZ](#cmz)
 
 Syntax  
@@ -479,10 +479,10 @@ If you declare the CMZ as `True`, it is declared as a hardware input and include
 ### GHOSTMODEDELAY
 
 ### HARDWAREINPUT
-Declaration area 
+Declaration area   
 [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
@@ -496,10 +496,10 @@ If you declare the input as `true`, it is declared as a hardware input and inclu
 ![PLC](images/PLCInputDeclarationAsHInputProperty.png)
 
 ### HARDWAREOUTPUT
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area
+Object area  
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -514,10 +514,10 @@ If you declare the output as `true`, it is declared as a hardware output and inc
 ![PLC](images/PLCOutputDeclerationAsHOutput.png)
 
 ### HMIBUTTON
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -532,10 +532,10 @@ MXIC cross-locking is a safety function that prevents the zone from being activa
 ![HMI](images/HMIButton.png)
 
 ### HMIBUTTONTEXT
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area 
+Object area   
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -549,10 +549,10 @@ The HMI button text is the identifier of the manual mode button of the zone and 
 ![HMI](images/HMIButtonText.png)
 
 ### HMIDISPLAYTEXT
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Output](#zone-output), [Parameter](#parameter), [CMZ](#cmz)
 
 Syntax
@@ -560,16 +560,16 @@ Syntax
 [HMIDISPLAYTEXT(Zone 7 On)]
 ```
 
-Description  
+Description    
 If a text is entered here, the text only takes effect in the HMI and is adopted as the display text. The Name property is overwritten in the HMI.
 ![Studio](images/StudioHmiDisplayText.png)  
 ![HMI](images/HmiDisplayText.png)  
 
 ### INPUTDELAY
-Declaration area  
+Declaration area    
 [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
@@ -580,10 +580,10 @@ Description
 Please specify by how many milliseconds the input signal should be delayed. The delay refers to the time difference between when the signal is received and when it is processed in the system. A delay may be intended to modify the signal in a particular way or to ensure that it is processed in synchronization with other signals. The exact amount of time by which the signal should be delayed depends on the requirements of the system and the type of signal being processed.
 
 ### INPUTDESCRIPTION
-Declaration area
+Declaration area  
 [VAR_OUTPUT](#var_output)
 
-Object area
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
@@ -598,10 +598,10 @@ A clear and precise description of the input variable can also ensure that it is
 ![HMI](images/PLC_GVL_Sequence_IOs_InputDescription.png)
 
 ### INPUTINVERTED
-Declaration area 
+Declaration area   
 [VAR_OUTPUT](#var_output)
 
-Object area 
+Object area   
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
@@ -612,10 +612,10 @@ Description
 Please specify whether the input signal is inverted or not. This means that you must decide whether the polarity of the signal entering a particular system is inverted or not. An inverted signal polarity means that the signal is reversed in terms of its positive and negative polarity. It is important to make this decision as it will affect the way the signal is processed in the system.
 
 ### INPUTMODE
-Declaration area 
+Declaration area   
 [VAR_OUTPUT](#var_output)
 
-Object area
+Object area  
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax  
@@ -626,10 +626,10 @@ Description
 The type of signal is determined by the mode of the input. This can be either a digital or analog signal or a parameter. The input mode therefore specifies what type of signal is expected and how this signal should be interpreted. For example, if the input mode is set to "digital", the system expects a signal that consists of discrete values, while a continuous signal is expected with an analog input mode. A parameter mode, on the other hand, expects a value that represents a specific parameter. Overall, the type of signal that a system receives and processes therefore depends largely on the input mode set.
 
 ### INVERTED
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [CMZ](#cmz)
 
 Syntax
@@ -643,10 +643,10 @@ If the "Inverted" field is activated, the value of the linked variable is invert
 ![PLC](images/PLCCMZDeclerationAsHardPrg.png)
 
 ### ISREFERENCEGROUP
-Declaration area
+Declaration area  
 [VAR_IN_OUT](#var_inout)
 
-Object area
+Object area  
 not applicable
 
 Syntax  
@@ -658,10 +658,10 @@ Description
 This declares an InOut variable as a reference group that shares the same referent with other functions. An example is several motion functions that address the same axis (AXIS_REF).
 
 ### KEEPOUTPUTALIVE
-Declaration area 
+Declaration area    
 [VAR_INPUT](#var_input)
 
-Object area 
+Object area   
 [Zone InOut](#zone-inout)
 
 Syntax
@@ -677,10 +677,10 @@ The control of the output offers two different approaches, which are determined 
 ![Studio](images/StudioOutputKeepAlive.png)
 
 ### LIMITMAX
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [Parameter](#parameter)
 
 Syntax
@@ -694,10 +694,10 @@ The maximum input value for a parameter is the highest value that is acceptable 
 ![HMI](images/HMIParameterLH.png)
 
 ### LIMITMIN 
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area     
 [Parameter](#parameter)
 
 Syntax
@@ -711,10 +711,10 @@ The minimum input value for an input parameter is the smallest value that is acc
 ![HMI](images/HMIParameterLL.png)
 
 ### OUTPUTDESCRIPTION
-Declaration area 
+Declaration area   
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -730,10 +730,10 @@ A clear and precise description of the output variable can also ensure that it i
 ![PLC](images/PLCOutputDescription.png)
 
 ### OUTPUTGROUP
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
 
 Syntax
@@ -765,10 +765,10 @@ The type of signal is determined by the mode of the output. This can be either a
 ![Studio](images/StudioOutputMode.png)
 
 ### PAIRCHECK
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area 
+Object area   
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax
@@ -780,10 +780,10 @@ Description
 If PairCheck is active, the zone is checked with other zones to ensure that certain conditions are met, such as the presence of signal 1 and signal 2, which must not occur at the same time.
 
 ### PAIRCHECKGROUP
-Declaration area 
+Declaration area     
 [VAR_INPUT](#var_input)
 
-Object area 
+Object area   
 [Zone In](#zone-in), [Zone InOut](#zone-inout)
 
 Syntax
@@ -795,10 +795,10 @@ Description
 The PairCheckGroup number is used to determine whether a zone-in of a check should be grouped with other zones of the same group. This grouping makes it possible to apply certain checks to multiple zones that have the same PairCheckGroup number to ensure that the results are consistent.
 
 ### PARAMETER
-Declaration area 
+Declaration area   
 [VAR_INPUT](#var_input)
 
-Object area  
+Object area    
 [Parameter](#parameter)
 
 Syntax
@@ -810,10 +810,10 @@ Description
 Is used to create a parameter in the parameter layer of the sequence.
 
 ### PERSISTENT
-Declaration area  
+Declaration area    
 [VAR_IN_OUT](#var_in_out)
 
-Object area 
+Object area     
 [GVL_<Sequence1>_Driver](#GVL_Sequence1_Driver)
 
 Syntax
@@ -825,10 +825,10 @@ Description
 Is used to declare a variable in the GVL_<Sequence1>_Driver Persistent.
 
 ### RELATED_PARAMETERS
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out), [Parameter](#parameter)
 
 Syntax
@@ -840,10 +840,10 @@ Description
 If it is necessary to insert several parameters at the same time, you can use this attribute to select which parameters are to be included in the insertion. This assumes that the respective parameter is present in the declaration.
 
 ### SECTION
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area    
 [Parameter](#parameter), [CMZ](#cmz)
 
 Syntax
@@ -857,10 +857,10 @@ The "Section" property can be used to group parameters and display them in a com
 ![HMI](images/HMIParameterSection.png)
 
 ### TYPE
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input)
 
-Object area
+Object area  
 [Parameter](#parameter)
 
 Syntax
@@ -872,10 +872,10 @@ Description
 Determines what type of parameter it is.
 ### UNIT 
 
-Declaration area 
+Declaration area   
 [VAR_INPUT](#var_input)
 
-Object area 
+Object area   
 [Parameter](#parameter)
 
 Syntax
@@ -889,10 +889,10 @@ The display unit of the parameter in the HMI refers to the unit in which the par
 ![HMI](images/HMIParameterUnit.png)
 
 ### ZONEGROUPNAME
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area 
+Object area   
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax
@@ -906,10 +906,10 @@ The ZONEGROUPNAME property can be used to combine zones into a group. It also se
 ![HMI](images/StudioGroupName.png)
 
 ### ZONENAME
-Declaration area  
+Declaration area    
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area     
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax
@@ -921,10 +921,10 @@ Description
 Zone names can be explicitly named by using the ZONENAME property.
 
 ### ZONETYPE
-Declaration area
+Declaration area  
 [VAR_INPUT](#var_input), [VAR_OUTPUT](#var_output)
 
-Object area  
+Object area     
 [Zone In](#zone-in), [Zone InOut](#zone-inout), [Zone Out](#zone-out)
 
 Syntax
