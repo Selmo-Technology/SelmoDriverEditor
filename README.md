@@ -126,12 +126,12 @@ ActValue: REFERENCE TO REAL;
 ///	[INTERFACE(stSequenceInterface)]
 ///	[INTERFACE(stHmiSequence)]
 ///	
-stSeqIf: stGlobalInterface;
-stSeqIf: stHmiGlobalInterface;
-stSeqIf: stHardwareZoneInterface;
-stSeqIf: stHmiHardwareZone;
-stSeqIf: stSequenceInterface;
-stSeqIf: stHmiSequence;
+stIf: stGlobalInterface;
+stIf: stHmiGlobalInterface;
+stIf: stHardwareZoneInterface;
+stIf: stHmiHardwareZone;
+stIf: stSequenceInterface;
+stIf: stHmiSequence;
 ```
 
 ### VAR_OUTPUT
