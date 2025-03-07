@@ -119,9 +119,19 @@ ActValue: REFERENCE TO REAL;
 ```cpp
 ///sequence interface "read only"
 ///
+///	[INTERFACE(stGlobalInterface)]
+///	[INTERFACE(stHmiGlobalInterface)]
+///	[INTERFACE(stHardwareZoneInterface)]
+///	[INTERFACE(stHmiHardwareZone)]
 ///	[INTERFACE(stSequenceInterface)]
+///	[INTERFACE(stHmiSequence)]
 ///	
+stSeqIf: stGlobalInterface;
+stSeqIf: stHmiGlobalInterface;
+stSeqIf: stHardwareZoneInterface;
+stSeqIf: stHmiHardwareZone;
 stSeqIf: stSequenceInterface;
+stSeqIf: stHmiSequence;
 ```
 
 ### VAR_OUTPUT
