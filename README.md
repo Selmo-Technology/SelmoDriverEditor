@@ -109,7 +109,10 @@ TimeoutComm: BOOL;
 ///	[DECIMALDIGITS(4)] 
 ///	[SECTION()]
 ///	[DISABLEAUTO(false)] 
-///	[BUTTONMODE()] 
+///	[BUTTONMODE()]
+///	[HIDEINHMI(false)]
+///	[DECIMALPLACE()]
+///	[PASSWORDPROTECTED(false)]
 ///	
 {attribute 'input_constant' := ''}
 ActValue: REFERENCE TO REAL;
@@ -266,7 +269,8 @@ Bei Selmo werden folgende Attribute verwendet:
 - [BUTTONMODE](#buttonmode) 
 - [CLONE2INVERTED](#clone2inverted)
 - [CMZ](#cmz)
-- [DECIMALDIGITS](#decimaldigits) 
+- [DECIMALDIGITS](#decimaldigits)
+- [DECIMALPLACE](#decimalplace)
 - [DECLARATIONASINPUT](#declarationasinput)
 - [DISABLEAUTO](#disableauto)
 - [ERRORDELAY](#errordelay)
@@ -275,6 +279,7 @@ Bei Selmo werden folgende Attribute verwendet:
 - [HARDWARE](#hardware)
 - [HARDWAREINPUT](#hardwareinput)
 - [HARDWAREOUTPUT](#hardwareoutput)
+- [HIDEINMI](#hideinhmi)
 - [HMIBUTTON](#hmibutton)
 - [HMIBUTTONTEXT](#hmibuttontext)
 - [HMIDISPLAYTEXT](#hmidisplaytext)
@@ -293,6 +298,7 @@ Bei Selmo werden folgende Attribute verwendet:
 - [PAIRCHECK](#paircheck)
 - [PAIRCHECKGROUP](#paircheckgroup)
 - [PARAMETER](#parameter)
+- [PASSWORDPROTECTED](#passwordprotected)
 - [PERSISTENT](#persistent)
 - [RELATED_PARAMETERS](#related_parameters)
 - [SECTION](#section)
@@ -428,6 +434,7 @@ Syntax
 ```cpp
 [DECIMALDIGITS(-1)]
 ```
+
 Beschreibung  
 DD (Decimal Digits) steht für die Anzahl der Dezimalstellen, die bei der Anzeige des Parameterwerts berücksichtigt werden sollen. Diese Anzahl wird üblicherweise im Parameter-Setup definiert und kann je nach Anwendung variieren. Wenn der Wert von DD auf 0 gesetzt wird, bedeutet dies, dass keine Nachkommastellen angezeigt werden sollen und der Wert als Ganzzahl dargestellt wird. Wenn DD auf -1 gesetzt wird, werden keine Nachkommastellen berücksichtigt, wenn DD auf 1 gesetzt wird, wird eine Dezimalstelle berücksichtigt und so weiter. Die Anzahl der Dezimalstellen ist wichtig, um eine korrekte und genaue Anzeige des Parameterwerts sicherzustellen. Wenn die Anzahl der Dezimalstellen nicht ausreichend ist, können wichtige Informationen verloren gehen oder ungenau dargestellt werden. Wenn die Anzahl der Dezimalstellen zu hoch ist, kann dies die Lesbarkeit des Wertes beeinträchtigen. Daher ist es wichtig, die Anzahl der Dezimalstellen sorgfältig zu definieren und zu überwachen, um eine genaue und lesbare Darstellung des Parameterwerts zu gewährleisten.
 
@@ -445,6 +452,22 @@ Deklarationsbereich
 
 Objektbereich  
 [CMZ](#cmz)
+
+Syntax
+```cpp
+[DECIMALPLACE(xxxx)]] 
+```
+
+Beschreibung  
+Die Zahl welche in die Klammer geschriben wird, bestimmt an welche stelle die die Decimalzahl beginnt.
+
+### Parameter
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[PARAMETER](#parameter)
+
 
 Syntax  
 ```cpp
@@ -516,7 +539,6 @@ Syntax
 ```cpp
 [HARDWAREOUTPUT(false)], [HARDWAREOUTPUT(true)] 
 ```
-
 Beschreibung  
 Wenn Sie den Output als `true` deklarieren, wird er als Hardware-Ausgang deklariert und mit dem `AT %Q*` Attribut in der Programmierungslogik eingebunden. Dies bedeutet, dass die Variable ein Signal oder einen Wert auf einem physikalischen Ausgang des Systems sendet, wie beispielsweise von einem Ventil oder einem Umrichter.
 
@@ -529,6 +551,22 @@ Deklarationsbereich
 
 Objektbereich  
 [Zone InOut](#zone-inout), [Zone Output](#zone-output)
+
+Syntax
+```cpp
+[HIDEINHMI(false)], [HIDEINHMI(true)] 
+```
+
+Beschreibung  
+Wenn Sie den Input als `true` deklarieren, wird dieser Parameter nicht mehr in der Selmo generierten HMI angezeigt.
+
+### Parameter
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[PARAMETER](#parameter)
+
 
 Syntax
 ```cpp
@@ -828,6 +866,22 @@ Deklarationsbereich
 
 Objektbereich  
 [GVL_<Sequence1>_Driver](#GVL_Sequence1_Driver)
+
+Syntax
+```cpp
+[PASSWORDPROTECTED(false), PASSWORDPROTECTED(true)]] 
+```
+
+Beschreibung  
+Wenn das Attribut auf "TRUE" gesetzt ist, dann könne die Variablen auf der HMI nur mit einem festgelegten Passwort verändert werden..
+
+### Parameter
+Deklarationsbereich  
+[VAR_INPUT](#var_input)
+
+Objektbereich  
+[PARAMETER](#parameter)
+
 
 Syntax
 ```cpp
