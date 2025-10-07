@@ -2,7 +2,7 @@
 ## Deklaration
 Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben.
 
-### Header
+### Header (Standard)
 Hier wird die Funktion so detailliert wie möglich beschrieben.
 ```cpp
 /// [3rd-Party-Header bei Verwendung fremder Funktionen]
@@ -22,7 +22,7 @@ Hier wird die Funktion so detailliert wie möglich beschrieben.
 ### VAR_IN_OUT
 Dies ist vorgesehen, um reale Hardware oder Daten mit dem Supsystem auszutauschen bzw. um zum Beispiel Motion Achsen zu steuern.
 
-#### Input 
+#### Input (Optional)
 ```cpp  
 ///	[PERSISTENT(false)]
 ///	[HARDWARE(in)]
@@ -31,7 +31,7 @@ Dies ist vorgesehen, um reale Hardware oder Daten mit dem Supsystem auszutausche
 ///	
 In_ActValue: REAL;
 ```       
-#### Output
+#### Output (Optional)
 ```cpp  
 ///	[PERSISTENT(false)]
 ///	[HARDWARE(out)]
@@ -41,7 +41,7 @@ In_ActValue: REAL;
 Out_Y: REAL;
 ```
 
-#### Referenz Variable (shared var)
+#### Referenz Variable "shared signal" (Optional)
 ```cpp  
 ///	[PERSISTENT(false)]
 ///	[ISREFERENCEGROUP(true)]
@@ -53,7 +53,7 @@ Axis: AXIS_REF;
 ### VAR_INPUT
 VAR_INPUT wird verwendet, um die Ausgänge der Zone zu verbinden, CMZs zu generieren, zugehörige Parameter zu erstellen und Schnittstellen der Selmowelt abzufragen.  
 
-#### Zone InOut
+#### Zone InOut (Optional)
 Wichtig: Bei einer InOut-Zone gibt es eine Deklaration im Bereich „VAR_INPUT” für das Ausgangssignal und im Bereich „VAR_OUTPUT” für das Feedbacksignal der Zone. 
 Hier muss der Name der Zone [ZONENAME(Controller on)] bei VAR_INPUT und bei VAR_OUTPUT exakt derselbe sein, damit das Selmo-System die Zone als InOut-Zone akzeptiert.
 ```cpp
@@ -77,7 +77,7 @@ Hier muss der Name der Zone [ZONENAME(Controller on)] bei VAR_INPUT und bei VAR_
 ControllerOn: BOOL;
 ```
 
-#### Zone Out
+#### Zone Out (Optional)
 ```cpp       
 ///	[PARAMETER(false)] 
 ///	[ZONETYPE(out)]
@@ -97,7 +97,7 @@ ControllerOn: BOOL;
 Set : BOOL;
 ```
 
-#### CMZ
+#### CMZ (Optional)
 ```cpp  
 ///	[CMZ(true)] 
 ///	[PARAMETER(false)] 
@@ -110,7 +110,7 @@ Set : BOOL;
 TimeoutComm: BOOL;
 ```
 
-#### Parameter
+#### Parameter (Optional)
 Wichtig: Wenn ein Anzeigeparameter [TYPE(output)] benötigt wird, kann die Variable nur als „REFERENCE TO” deklariert werden. Bei einem Eingabeparameter ist dies nicht erforderlich.
 ```cpp
 ///		 	 
@@ -133,28 +133,35 @@ Wichtig: Wenn ein Anzeigeparameter [TYPE(output)] benötigt wird, kann die Varia
 ActValue: REFERENCE TO REAL;
 ```
 
-#### Schnittstelle
+#### Schnittstelle (Standard)
+Wichtig: Diese Schnittstelle dient der automatischen Deaktivierung von Signalen beim Wechsel von der Automatik- in die Handbetriebsweise. 
+- [Signaldeaktivierung](#signaldeaktivierung)
 ```cpp
 ///sequence interface "read only"
 ///
+///	[INTERFACE(stSequenceInterface)]
+stIf: stSequenceInterface;
+```
+
+#### Schnittstellen (Optional)
+```cpp
+[Optional]
 ///	[INTERFACE(stGlobalInterface)]
 ///	[INTERFACE(stHmiGlobalInterface)]
 ///	[INTERFACE(stHardwareZoneInterface)]
 ///	[INTERFACE(stHmiHardwareZone)]
-///	[INTERFACE(stSequenceInterface)]
 ///	[INTERFACE(stHmiSequence)]
 ///	
 stIf: stGlobalInterface;
 stIf: stHmiGlobalInterface;
 stIf: stHardwareZoneInterface;
 stIf: stHmiHardwareZone;
-stIf: stSequenceInterface;
 stIf: stHmiSequence;
 ```
 
 ### VAR_OUTPUT
 VAR_OUTPUT wird verwendet, um die Eingänge der Zone zu verbinden.  
-#### Zone InOut
+#### Zone InOut (Standard)
 Wichtig: Bei einer InOut-Zone gibt es eine Deklaration im Bereich „VAR_INPUT” für das Ausgangssignal und im Bereich „VAR_OUTPUT” für das Feedbacksignal der Zone. 
 Hier muss der Name der Zone [ZONENAME(Controller on)] bei VAR_INPUT und bei VAR_OUTPUT exakt derselbe sein, damit das Selmo-System die Zone als InOut-Zone akzeptiert.
 ```cpp
@@ -179,7 +186,7 @@ Hier muss der Name der Zone [ZONENAME(Controller on)] bei VAR_INPUT und bei VAR_
 ControllerIsOn: BOOL;
 ```
 
-#### Zone In
+#### Zone In (Optional)
 ```cpp
 ///	 			  
 ///	[CMZ(false)] 
@@ -202,17 +209,17 @@ ControllerIsOn: BOOL;
 LimitDetection: BOOL;
 ```
 
-### VAR
+### VAR (Standard)
 ```cpp
-fbCTRL_PID: CTRL_PID;
 F_TRIGAuto: F_TRIG;
 /// One cycle initialization
 xInit: BOOL;
+xError: BOOL;
 ```
 
 ### Code
 
-#### Initialisierung
+#### Initialisierung (Standard)
 Der Codeabschnitt `//initialize procedure` enthält, wie der Name schon sagt, Initialisierungswerte und ist ein fester Bestandteil jeder Selmo-Funktion.
 ```cpp
 //initialize procedure
@@ -223,20 +230,16 @@ IF NOT xInit THEN
 	xInit:=TRUE;
 END_IF
 ```
-#### Signaldeaktivierung 
+#### Signaldeaktivierung (Standard)
 Der Codeabschnitt `//Signals deactivate on falling edge of the automatic release.` beinhaltet, wie der Name bereits impliziert, Signale, die zwingend deaktiviert bzw. aktiviert werden müssen und stellt einen festen Bestandteil jeder Selmo-Funktion dar.
 ```cpp
 //Signals deactivate on falling edge of the automatic release.
 F_TRIGAuto(CLK:=stSeqIf.xSeqAutomaticReleased, Q=> );
 
 IF F_TRIGAuto.Q OR NOT stSeqIf.xNoCMZFault THEN
-	ControllerIsOn := FALSE; 
-	ControllerIsOff := TRUE; 
+	[Signalverarbeitung, wenn die Automatik ausfällt.]
 ELSE
-	ControllerIsOn S= ControllerOn; 
-	ControllerIsOn R= ControllerOff; 
-	ControllerIsOff S= ControllerOff; 
-	ControllerIsOff R= ControllerOn;  
+	[Signalverarbeitung, wenn alles in Ordnung ist.]
 END_IF
 ```
 #### Funktion
