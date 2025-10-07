@@ -5,19 +5,22 @@ Die Attributte werden ausschlißlich in der Deklaration als Kommentar übergeben
 ### Header
 Hier wird die Funktion so detailliert wie möglich beschrieben.
 ```cpp
+/// [3rd-Party-Header bei Verwendung fremder Funktionen]
 /// Powered by OSCAT www.oscat.de
 /// Version 3.33
 /// Modified by Selmo Technology
+/// [Funktionsbeschreibung so detailliert wie möglich]
 /// A PID controller with dynamic anti-wind up and manual control
 ///
+/// [Versionierung]
 /// version 1.3	
-/// programmer	og         
-/// tested by	hm   
-/// [GROUP(Control engineering)] 
+/// programmer	 [Kürzel}         
+/// tested by	[Kürzel}   
+/// [GROUP(Kategoriebezeichnung)] 
 ```
 
 ### VAR_IN_OUT
-Dies ist vorgesehen, um reale Hardware zu steuern.
+Dies ist vorgesehen, um reale Hardware oder Daten mit dem Supsystem auszutauschen bzw. um zum Beispiel Motion Achsen zu steuern.
 
 #### Input 
 ```cpp  
@@ -38,10 +41,21 @@ In_ActValue: REAL;
 Out_Y: REAL;
 ```
 
+#### Referenz Variable (shared var)
+```cpp  
+///	[PERSISTENT(false)]
+///	[ISREFERENCEGROUP(true)]
+///	[DESCRIPTION(Axis ref)]	 
+///	
+Axis: AXIS_REF;
+```
+
 ### VAR_INPUT
 VAR_INPUT wird verwendet, um die Ausgänge der Zone zu verbinden, CMZs zu generieren, zugehörige Parameter zu erstellen und Schnittstellen der Selmowelt abzufragen.  
 
 #### Zone InOut
+Wichtig: Bei einer InOut-Zone gibt es eine Deklaration im Bereich „VAR_INPUT” für das Ausgangssignal und im Bereich „VAR_OUTPUT” für das Feedbacksignal der Zone. 
+Hier muss der Name der Zone [ZONENAME(Controller on)] bei VAR_INPUT und bei VAR_OUTPUT exakt derselbe sein, damit das Selmo-System die Zone als InOut-Zone akzeptiert.
 ```cpp
 ///		 
 ///	[PARAMETER(false)] 
@@ -54,7 +68,7 @@ VAR_INPUT wird verwendet, um die Ausgänge der Zone zu verbinden, CMZs zu generi
 ///	[OUTPUTDESCRIPTION(Controller on)]
 ///	[HARDWAREOUTPUT(false)] 
 ///	[OUTPUTMODE(digital)]
-///     [RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
+/// [RELATED_PARAMETERS(SetPoint,Suppression,OutputOffset,ManualInputValue,P_KP,I_TN,D_TV,LL,LH,Diff)]
 ///	[ANALOGPARAMETER()] 
 ///	[ANALOGVALUE()] 
 ///	[PAIRCHECK(true)] 
@@ -97,6 +111,7 @@ TimeoutComm: BOOL;
 ```
 
 #### Parameter
+Wichtig: Wenn ein Anzeigeparameter [TYPE(output)] benötigt wird, kann die Variable nur als „REFERENCE TO” deklariert werden. Bei einem Eingabeparameter ist dies nicht erforderlich.
 ```cpp
 ///		 	 
 ///	[PARAMETER(true)] 
@@ -140,6 +155,8 @@ stIf: stHmiSequence;
 ### VAR_OUTPUT
 VAR_OUTPUT wird verwendet, um die Eingänge der Zone zu verbinden.  
 #### Zone InOut
+Wichtig: Bei einer InOut-Zone gibt es eine Deklaration im Bereich „VAR_INPUT” für das Ausgangssignal und im Bereich „VAR_OUTPUT” für das Feedbacksignal der Zone. 
+Hier muss der Name der Zone [ZONENAME(Controller on)] bei VAR_INPUT und bei VAR_OUTPUT exakt derselbe sein, damit das Selmo-System die Zone als InOut-Zone akzeptiert.
 ```cpp
 ///	 			  
 ///	[CMZ(false)] 
@@ -147,7 +164,7 @@ VAR_OUTPUT wird verwendet, um die Eingänge der Zone zu verbinden.
 ///	[ZONETYPE(inout)] 
 ///	[ZONENAME(Controller on)] 
 ///	[ZONEGROUPNAME()] 
-///  	[CLONE2INVERTED(false)]
+/// [CLONE2INVERTED(false)]
 ///	[HMIDISPLAYTEXT(Controller is on)] 
 ///	[HARDWAREINPUT(false)] 	
 ///	[INPUTDESCRIPTION(Controller is on)] 
@@ -170,7 +187,7 @@ ControllerIsOn: BOOL;
 ///	[ZONETYPE(in)] 
 ///	[ZONENAME(Controller Limit)] 
 ///	[ZONEGROUPNAME()] 
-///  	[CLONE2INVERTED(false)]
+/// [CLONE2INVERTED(false)]
 ///	[HMIDISPLAYTEXT(Controller Limit detection)] 
 ///	[HARDWAREINPUT(false)] 	
 ///	[INPUTDESCRIPTION(Controller Limit detection)] 
@@ -254,9 +271,117 @@ Out_Y_Int := REAL_TO_INT(Out_Y);
 ```
 
 <details>
-<summary> Deklarations Beispiel </summary>
+<summary> Selmo Funktion Beispiel FB_PulseGen </summary>
+
+```cpp
+/// Powered by OSCAT www.oscat.de
+/// Version 3.33
+/// Modified by Selmo Technology
+/// A pulse generator that operates with a pulse time and controls an output signal.
+///
+/// version 1.0.0	
+/// programmer	og         
+/// tested by	am   
+/// [GROUP(Common)] 
+FUNCTION_BLOCK FB_PulseGen
+VAR_IN_OUT
+	///	[PERSISTENT(false)]
+	///	[HARDWARE(out)]
+	///	[DESCRIPTION(Output)]	 
+	///	
+	Out: BOOL;
+END_VAR
+VAR_INPUT
+	///		 
+	///	[PARAMETER(false)] 
+	///	[ZONETYPE(out)]
+	///	[ZONENAME(Enable)] 
+	///	[ZONEGROUPNAME()]      
+	///	[HMIBUTTON(true)] 
+	///	[HMIBUTTONTEXT(Enable)]  
+	///	[HMIDISPLAYTEXT(Enable)]
+	///	[OUTPUTDESCRIPTION(Enable)]
+	///	[HARDWAREOUTPUT(false)] 
+	///	[OUTPUTMODE(digital)]
+	/// [RELATED_PARAMETERS(PulseTime)]
+	///	[ANALOGPARAMETER()] 
+	///	[ANALOGVALUE()] 
+	///	[PAIRCHECK(true)] 
+	///	[PAIRCHECKGROUP(1)]
+	///	
+	Enable: BOOL;
+		
+	///sequence interface "read only"
+	///
+	///	[INTERFACE(stSequenceInterface)]
+	///	
+	stSeqIf: stSequenceInterface;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR_INPUT
+	///		 	 
+	///	[PARAMETER(true)] 
+	///	[TYPE(input)]
+	///	[HMIDISPLAYTEXT(Pulse Time)] 
+	///	[UNIT(ms)] 
+	///	[INITIALVALUE(250)]	 
+	///	[LIMITMIN(0)] 
+	///	[LIMITMAX(5000)] 
+	///	[DECIMALDIGITS(0)] 
+	///	[SECTION()]
+	///	[DISABLEAUTO(false)] 
+	///	[BUTTONMODE()] 
+	///	
+	{attribute 'input_constant' := ''}
+	PulseTime: REFERENCE TO TIME;
+	
+END_VAR
+VAR
+	F_TRIGAuto: F_TRIG;
+	/// One cycle initialization
+	xInit: BOOL;
+	xError: BOOL;
+	xEnable: BOOL;
+	TONOF : TONOF;
+END_VAR
+
+IF NOT( __ISVALIDREF(PulseTime)) 
+THEN  
+	IF NOT xError THEN 
+		ADSLOGSTR( ADSLOG_MSGTYPE_ERROR OR ADSLOG_MSGTYPE_LOG, 'Selmo Function: One or more reference types do not have a valid address --> %s', 'FB_PulseGen' );
+	END_IF
+	xError:=TRUE;
+	RETURN;
+END_IF
+
+	//initialize procedure
+	IF NOT xInit THEN 
+		xEnable := FALSE; 
+		xInit:=TRUE;
+	END_IF
+	
+	F_TRIGAuto(CLK:=stSeqIf.xSeqAutomaticReleased, Q=> );
+	
+	//falling edge signal disables the function
+	IF F_TRIGAuto.Q THEN
+		xEnable := FALSE; 
+	ELSE
+		xEnable := Enable;
+	END_IF
+	
+	//Pulse is generated via TON TOF from the OSCAT Basic function library.
+	IF xEnable THEN
+		TONOF(IN:=NOT TONOF.Q  , T_ON:=PulseTime , T_OFF:=PulseTime , Q=>Out);
+	ELSE
+		TONOF(IN:=FALSE , T_ON:=PulseTime , T_OFF:=PulseTime);
+		Out := FALSE;
+	END_IF
+```	
 	
 </details>
+
+
 
 ## Übersicht der Attribute
 Insgesamt sind Attribute in der Programmierung grundlegend für die Organisation und Verarbeitung von Daten und Informationen in Programmen und Anwendungen.
